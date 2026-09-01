@@ -93,7 +93,7 @@ export default function Footer() {
           rige por sus Términos de Servicio y Política de Privacidad. LOALDI
           CONSULTING GROUP LLC es una empresa de educación y capacitación en
           ventas y marketing. No vendemos una oportunidad de negocio, ni
-          programas para "hacerse rico rápido" o un sistema para ganar dinero.
+          programas para &ldquo;hacerse rico rápido&rdquo; o un sistema para ganar dinero.
         </p>
         <p>
           Los resultados varían, no son típicos y dependen del esfuerzo, el

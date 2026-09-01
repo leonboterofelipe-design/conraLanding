@@ -1,16 +1,19 @@
-import React from 'react';
-import Image from 'next/image';
+import React from "react";
+import Image from "next/image";
 
 export default function AboutConrado() {
   return (
     <section id="sobre-conrado" className="py-20 bg-dark text-light px-6">
       <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12">
         <div className="w-full md:w-1/2">
-          <div className="aspect-square bg-gray-800 rounded-lg overflow-hidden">
-            <img
+          <div className="aspect-square bg-gray-800 rounded-lg overflow-hidden relative">
+            <Image
               src="/assets/images/DSC01098.JPG"
               alt="Conrado Loaldi - CEO & Founder de Conra FBA"
-              className="w-full h-full object-cover"
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover"
+              priority
             />
           </div>
         </div>

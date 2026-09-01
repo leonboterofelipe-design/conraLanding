@@ -1,0 +1,17 @@
+# 1. Inicializa el repositorio local (si no lo has hecho ya)
+git init
+
+# 2. Agrega todos los archivos al área de preparación
+git add .
+
+# 3. Crea tu primer commit
+git commit -m "Initial commit: Estructura base de la landing de CONRA FBA"
+
+# 4. Asegúrate de que la rama principal se llame 'main'
+git branch -M main
+
+# 5. Vincula tu proyecto local con el repositorio de GitHub
+git remote add origin https://github.com/leonboterofelipe-design/conraLanding.git
+
+# 6. Sube los archivos a GitHub
+git push -u origin main

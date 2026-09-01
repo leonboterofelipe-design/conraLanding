@@ -1,19 +1,19 @@
-import React from 'react';
-import { Star } from 'lucide-react';
+import React from "react";
+import { Star } from "lucide-react";
 
 export default function Testimonials() {
   const testimonials = [
     {
-      name: 'Carlos Uribe',
-      text: 'Desde que entré a la mentoría, pasé de hacer arbitraje online a trabajar Wholesale. El crecimiento ha sido exponencial. Conrado no solo enseña teoría, abre las puertas de su negocio.',
+      name: "Carlos Uribe",
+      text: "Desde que entré a la mentoría, pasé de hacer arbitraje online a trabajar Wholesale. El crecimiento ha sido exponencial. Conrado no solo enseña teoría, abre las puertas de su negocio.",
     },
     {
-      name: 'Carolina Mesa',
-      text: 'Entrar a esta academia fue la mejor decisión. El acompañamiento y apoyo ha sido esencial. Creo que todas las personas que quieren emprender en Amazon deberían empezar por acá.',
+      name: "Carolina Mesa",
+      text: "Entrar a esta academia fue la mejor decisión. El acompañamiento y apoyo ha sido esencial. Creo que todas las personas que quieren emprender en Amazon deberían empezar por acá.",
     },
     {
-      name: 'Nelson Yevara',
-      text: 'Excelente mentoría, super completa. Todo está explicado con detalle. El material vale muchísimo, además del equipo de soporte. Te acompañan en las 12 semanas paso a paso.',
+      name: "Nelson Yevara",
+      text: "Excelente mentoría, super completa. Todo está explicado con detalle. El material vale muchísimo, además del equipo de soporte. Te acompañan en las 12 semanas paso a paso.",
     },
   ];
 
@@ -44,7 +44,7 @@ export default function Testimonials() {
                   />
                 ))}
               </div>
-              <p className="text-slate-300 mb-6 italic">"{test.text}"</p>
+              <p className="text-slate-300 mb-6 italic">&ldquo;{test.text}&rdquo;</p>
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 bg-brand-600 rounded-full flex items-center justify-center font-bold text-xl">
                   {test.name.charAt(0)}
