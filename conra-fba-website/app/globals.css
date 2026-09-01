@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #ffffff;
+  color: #0f0f0f;
+}
+
+/* Utilidades personalizadas de Arquitectura y Texto */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .container-fluid {
+    @apply px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto;
+  }
+
+  /* Clases modulares para las secciones institucionales */
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+
+  .section-heading {
+    @apply text-3xl md:text-4xl lg:text-5xl font-black text-dark mb-6 tracking-tight;
+  }
+
+  .section-subheading {
+    @apply text-lg md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed;
+  }
+}
+
+/* Animaciones y Componentes UI */
+@layer components {
+  .smooth-gradient {
+    background: linear-gradient(135deg, #FF8D0F 0%, #e67a00 100%);
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center bg-brand-500 text-white font-bold py-3.5 px-8 rounded-lg hover:bg-brand-600 transition-all duration-200 transform hover:-translate-y-0.5 shadow-lg hover:shadow-brand-500/30 focus:outline-none focus:ring-4 focus:ring-brand-500/20;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center border-2 border-brand-500 text-brand-600 font-bold py-3.5 px-8 rounded-lg hover:bg-brand-50 transition-colors duration-200 focus:outline-none focus:ring-4 focus:ring-brand-500/20 bg-transparent;
+  }
+
+  /* Tarjetas para los pilares del programa */
+  .card-institucional {
+    @apply bg-white p-8 rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow duration-300;
+  }
+}
+
+/* Scroll bar personalizado con la identidad de la marca */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f8fafc; /* Gris muy sutil para limpiar el diseño */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FF8D0F; /* Naranja principal */
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e67a00; /* Naranja hover */
+}
