@@ -31,4 +31,4 @@ vercel login
 Ejecuta la simulación de compilación aislada:Bashvercel build
 ---
 npm install swiper
-para correr sliders
+para correr sliders pero es mal
