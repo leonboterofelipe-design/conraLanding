@@ -40,5 +40,5 @@ vercel build
 
 
 ----limpiar cache
-Remove-Item -Path ".next" -Recurse -Force
+Remove-Item -Path ".next" -Recurse -Force -ErrorAction SilentlyContinue
 npm run build
