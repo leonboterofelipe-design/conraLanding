@@ -29,14 +29,14 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="es" className="scroll-smooth">
+    <html lang="es" className="scroll-smooth dark">
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
-      <body className={inter.className}>
+      <body className={`${inter.className} bg-black text-zinc-100 antialiased selection:bg-brand-500 selection:text-white`}>
         <Navbar />
-        <main className="min-h-screen bg-slate-50">
+        <main className="min-h-screen bg-black pt-20">
           {children}
         </main>
         <Footer />
