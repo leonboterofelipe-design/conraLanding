@@ -5,7 +5,7 @@ import AboutConrado from '@/components/sections/AboutConrado';
 import Testimonials from '@/components/sections/Testimonials';
 import FAQ from '@/components/sections/FAQ';
 import CTA from '@/components/sections/CTA';
-import QuienSoyPage from './conrafba/quien-soy/page';
+import QuienSoyPage from './conraFBA/quien-soy/page';
 
 export default function Page() {
   return (
