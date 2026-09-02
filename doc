@@ -32,3 +32,13 @@ Ejecuta la simulación de compilación aislada:Bashvercel build
 ---
 npm install swiper
 para correr sliders pero es mal
+--------
+
+para ver los errores de vercel de manera local 
+npm i -g vercel
+vercel build
+
+
+----limpiar cache
+Remove-Item -Path ".next" -Recurse -Force
+npm run build
