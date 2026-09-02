@@ -16,7 +16,7 @@ export default function Page() {
       <Testimonials />
       <FAQ />
       <CTA />
-      <QuienSoyPage /> 
+      <QuienSoyPage/> 
     </>
   );
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
+// [source: 1] Integración de artefactos limpios y optimización de componentes estáticos para Vercel
 export default function QuienSoyPage() {
   return (
     <main className="min-h-screen bg-black text-white pt-8 pb-20 px-6 md:pt-16 md:pb-32">
