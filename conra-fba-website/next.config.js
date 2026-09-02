@@ -1,10 +1,19 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  async rewrites() {
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**',
+      },
+    ],
+  },
+  async redirects() {
     return [
       {
-        source: '/conrafba/:path*',
+        source: '/conraFBA/:path*',
         destination: '/conra-fba/:path*',
+        permanent: true,
       },
     ];
   },
