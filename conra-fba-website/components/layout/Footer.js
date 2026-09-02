@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -11,9 +12,15 @@ export default function Footer() {
             href="https://go.conrafba.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-2xl font-black text-light tracking-tighter block mb-4"
+            className="block mb-4 w-fit"
           >
-            CONRA <span className="text-brand-500">FBA</span>
+            <Image
+              src="/assets/images/logo1.jpg"
+              alt="Amazon Direct Academy"
+              width={220}
+              height={124}
+              className="h-auto w-[220px]"
+            />
           </a>
           <p className="text-gray-400">
             Mentoría especializada en Amazon Wholesale sin intermediarios. Desarrollado por Loaldi Consulting Group LLC.
@@ -108,12 +115,12 @@ export default function Footer() {
         <p className="mt-2 md:mt-0">
           Desarrollado por{' '}
           <a
-            href="https://floweb.co/"
+            href="https://floweb.com.co/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-brand-500 font-medium hover:text-brand-400 transition-colors"
           >
-            Floweb Digital
+            Floweb 
           </a>
         </p>
       </div>

@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        dark: '#0f0f0f',
+        dark: '#000000',
         light: '#ffffff',
         // Escala oficial de CONRA FBA basada en #FF8D0F
         'brand-50': '#fff8f1',

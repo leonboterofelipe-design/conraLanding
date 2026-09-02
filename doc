@@ -29,3 +29,6 @@ npm run build
 Instala y autentícate en la CLI:  Bashnpm i -g vercel
 vercel login
 Ejecuta la simulación de compilación aislada:Bashvercel build
+---
+npm install swiper
+para correr sliders
