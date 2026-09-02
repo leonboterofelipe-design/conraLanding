@@ -8,6 +8,15 @@ const nextConfig = {
       },
     ],
   },
-}
+  async redirects() {
+    return [
+      {
+        source: '/conraFBA/:path*',
+        destination: '/conra-fba/:path*',
+        permanent: true,
+      },
+    ];
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
