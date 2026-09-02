@@ -19,3 +19,8 @@ git push -u origin main
 -------
 Para compilar de nuevo
 npm run dev
+
+
+----
+cargar bien a vercel
+npm run build
