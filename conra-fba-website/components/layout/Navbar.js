@@ -23,8 +23,11 @@ export default function Navbar() {
                 alt="CONRA FBA Logo"
                 width={320}
                 height={80}
-                className="h-20 w-auto object-contain"
+                className="h-20 w-auto object-contain border-t-[15px] border-b-[10px] border-black"
                 priority
+
+
+                
               />
             </Link>
           </div>
