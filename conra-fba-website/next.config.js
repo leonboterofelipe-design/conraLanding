@@ -11,7 +11,7 @@ const nextConfig = {
   async redirects() {
     return [
       {
-        source: '/conraFBA/:path*',
+        source: '/conrafba/:path*',
         destination: '/conra-fba/:path*',
         permanent: true,
       },
