@@ -34,3 +34,9 @@ yarn-error.log*
 *.swp
 *.swo
 *~
+
+node_modules/
+.next/
+.vercel/
+skills-*/
+.env*.local
