@@ -96,9 +96,9 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto border-t border-gray-800 pt-6 text-gray-500 space-y-3">
         <p>
           Esta página web es operada y mantenida por{' '}
-          <strong>LOALDI CONSULTING GROUP LLC</strong>. El uso del sitio web se
-          rige por sus Términos de Servicio y Política de Privacidad. LOALDI
-          CONSULTING GROUP LLC es una empresa de educación y capacitación en
+          <strong>DIGITAL BUSINESS COL</strong>. El uso del sitio web se
+          rige por sus Términos de Servicio y Política de Privacidad. ESPACIO PARA NOMBRE DE EMPRESA 
+           es una empresa de educación y capacitación en
           ventas y marketing. No vendemos una oportunidad de negocio, ni
           programas para &ldquo;hacerse rico rápido&rdquo; o un sistema para ganar dinero.
         </p>
@@ -111,7 +111,7 @@ export default function Footer() {
       </div>
 
       <div className="max-w-7xl mx-auto pt-6 border-t border-gray-800/50 text-center md:text-left flex flex-col md:flex-row justify-between items-center text-gray-400">
-        <p>&copy; {currentYear} LOALDI CONSULTING GROUP LLC - Todos los derechos reservados.</p>
+        <p>&copy; {currentYear} DIGITAL BUSINESS COL - Todos los derechos reservados.</p>
         <p className="mt-2 md:mt-0">
           Desarrollado por{' '}
           <a

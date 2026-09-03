@@ -105,21 +105,23 @@ export default function Navbar() {
             </div>
 
           {/* Menu 4: Estrategia $10k */}
-            <div className="relative group">
-              <button className="flex items-center gap-1 text-zinc-300 hover:text-white font-medium transition-colors py-2 focus:outline-none">
-                Estrategia $10k
-                <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
-              </button>
-              
-              <div className="absolute left-0 top-full w-52 bg-zinc-950 border border-zinc-800 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 py-2">
-                <Link
-                  href="/Estrategia $10k/VSL"
-                  className="block px-4 py-2 text-sm text-zinc-300 hover:text-white hover:bg-zinc-900 transition-colors"
-                >
-                  VSL
-                </Link>
-                             </div>
-            </div>
+<div className="relative group">
+  <button className="flex items-center gap-1 text-zinc-300 hover:text-white font-medium transition-colors py-2 focus:outline-none">
+    Estrategia $10k
+    <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
+  </button>
+  
+  <div className="absolute left-0 top-full w-52 bg-zinc-950 border border-zinc-800 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 py-2 z-50">
+    <a
+      href="https://go.conrafba.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="block px-4 py-2 text-sm text-zinc-300 hover:text-white hover:bg-zinc-900 transition-colors"
+    >
+      VSL
+    </a>
+  </div>
+</div>
 
             {/* Action Call */}
             <a href="https://go.conrafba.com/calendario" target="_blank" rel="noopener noreferrer">
