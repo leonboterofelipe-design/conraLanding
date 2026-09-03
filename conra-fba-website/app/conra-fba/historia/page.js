@@ -29,7 +29,7 @@ export default function HistoriaPage() {
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [sections]);
 
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
@@ -52,7 +52,7 @@ export default function HistoriaPage() {
             Nuestra historia
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl leading-relaxed">
-            Cómo un sistema real en Amazon nació de equivocarse, aprender y decir "esto debe hacerse diferente".
+            Cómo un sistema real en Amazon nació de equivocarse, aprender y decir &quot;esto debe hacerse diferente&quot;.
           </p>
         </div>
       </section>
@@ -158,7 +158,7 @@ export default function HistoriaPage() {
             
             <div className="space-y-6 text-gray-700 leading-relaxed text-base">
               <p>
-                El quiebre llegó cuando Conrado dejó de buscar "el producto milagroso" y empezó a mirar el negocio como lo que realmente es: una empresa basada en procesos, datos y relaciones comerciales estables.
+                El quiebre llegó cuando Conrado dejó de buscar &quot;el producto milagroso&quot; y empezó a mirar el negocio como lo que realmente es: una empresa basada en procesos, datos y relaciones comerciales estables.
               </p>
 
               <p>
