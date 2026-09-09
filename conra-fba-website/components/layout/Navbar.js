@@ -95,13 +95,15 @@ export default function Navbar() {
               </button>
               
               <div className="absolute left-0 top-full w-52 bg-zinc-950 border border-zinc-800 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 py-2">
-                <Link
-                  href="/Aprende aquía/Skool"
+                <a
+                  href="https://www.skool.com/conrafba"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="block px-4 py-2 text-sm text-zinc-300 hover:text-white hover:bg-zinc-900 transition-colors"
                 >
                   Skool
-                </Link>
-                             </div>
+                </a>
+              </div>
             </div>
 
           {/* Menu 4: Estrategia $10k */}
