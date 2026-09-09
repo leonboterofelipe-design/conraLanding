@@ -118,7 +118,7 @@ export default function Footer() {
 
               <Link
 
-                href="https://www.skool.com/conrafba/about"
+                href="/casos-de-exito"
 
                 className="hover:text-brand-500 transition-colors"
 
