@@ -10,6 +10,8 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [mobileConraOpen, setMobileConraOpen] = useState(false);
   const [mobileAdaOpen, setMobileAdaOpen] = useState(false);
+  const [mobileAprendeOpen, setMobileAprendeOpen] = useState(false);
+  const [mobileEstrategiaOpen, setMobileEstrategiaOpen] = useState(false);
 
   return (
     <nav className="fixed top-0 left-0 w-full bg-black/95 backdrop-blur-sm z-50 border-b border-zinc-800 shadow-sm">
@@ -207,6 +209,52 @@ export default function Navbar() {
                 >
                   A quien ayudamos
                 </Link>
+              </div>
+            )}
+          </div>
+
+          <div>
+            <button
+              onClick={() => setMobileAprendeOpen(!mobileAprendeOpen)}
+              className="flex items-center justify-between w-full text-zinc-300 py-2 font-medium"
+            >
+              Aprende aquí
+              <ChevronDown className={`w-4 h-4 transition-transform ${mobileAprendeOpen ? 'rotate-180' : ''}`} />
+            </button>
+            {mobileAprendeOpen && (
+              <div className="pl-4 space-y-2 mt-1 border-l border-zinc-800">
+                <a
+                  href="https://www.skool.com/conrafba"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setIsOpen(false)}
+                  className="block text-sm text-zinc-400 hover:text-white py-1"
+                >
+                  Skool
+                </a>
+              </div>
+            )}
+          </div>
+
+          <div>
+            <button
+              onClick={() => setMobileEstrategiaOpen(!mobileEstrategiaOpen)}
+              className="flex items-center justify-between w-full text-zinc-300 py-2 font-medium"
+            >
+              Estrategia $10k
+              <ChevronDown className={`w-4 h-4 transition-transform ${mobileEstrategiaOpen ? 'rotate-180' : ''}`} />
+            </button>
+            {mobileEstrategiaOpen && (
+              <div className="pl-4 space-y-2 mt-1 border-l border-zinc-800">
+                <a
+                  href="https://go.conrafba.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setIsOpen(false)}
+                  className="block text-sm text-zinc-400 hover:text-white py-1"
+                >
+                  VSL
+                </a>
               </div>
             )}
           </div>
