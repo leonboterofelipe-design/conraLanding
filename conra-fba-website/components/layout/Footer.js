@@ -102,13 +102,13 @@ export default function Footer() {
 
              <Link
 
-                href="/privacidad"
+                href="https://www.skool.com/conrafba/about"
 
                 className="hover:text-brand-500 transition-colors"
 
               >
 
-                Política de Privacidad
+                Skool
             
               </Link>
             </li>
@@ -118,7 +118,7 @@ export default function Footer() {
 
               <Link
 
-                href="/casos-de-exito"
+                href="https://www.skool.com/conrafba/about"
 
                 className="hover:text-brand-500 transition-colors"
 
