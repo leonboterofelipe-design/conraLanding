@@ -4,6 +4,8 @@ import Image from 'next/image';
 
 import Link from 'next/link';
 
+import { Instagram } from 'lucide-react';
+
 
 
 export default function Footer() {
@@ -46,19 +48,27 @@ export default function Footer() {
 
               width={220}
 
-              height={124}
+              height={110}
 
-              className="h-auto w-[220px]"
+              className="h-auto w-[130px]"
 
             />
-
           </a>
 
           <p className="text-gray-400">
-
             Mentoría especializada en Amazon Wholesale sin intermediarios. Desarrollado por Loaldi Consulting Group LLC.
-
           </p>
+
+          <a
+            href="https://www.instagram.com/amazondirectacademy/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visitar Amazon Direct Academy en Instagram"
+            title="Instagram"
+            className="mt-5 inline-flex h-10 w-10 items-center justify-center rounded-full border border-gray-700 text-gray-400 transition-colors hover:border-brand-500 hover:text-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 focus:ring-offset-dark"
+          >
+            <Instagram className="h-5 w-5" aria-hidden="true" />
+          </a>
 
         </div>
 
@@ -219,11 +229,15 @@ export default function Footer() {
 
 
 
+      
       <div className="max-w-7xl mx-auto pt-6 border-t border-gray-800/50 text-center md:text-left flex flex-col md:flex-row justify-between items-center text-gray-400">
 
         <p>&copy; {currentYear} Loaldi Consulting Group LLC - DIGITAL BUSINESS COL - Todos los derechos reservados.</p>
 
         <p className="mt-2 md:mt-0">
+</p>
+          </div>
+          {/*
 
           Desarrollado por{' '}
 
@@ -246,7 +260,7 @@ export default function Footer() {
         </p>
 
       </div>
-
+*/}
     </footer>
 
   );

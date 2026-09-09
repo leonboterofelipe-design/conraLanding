@@ -21,8 +21,9 @@ export default function Navbar() {
               <Image
                 src="/assets/images/logo1.jpg"
                 alt="CONRA FBA Logo"
-                width={320}
-                height={80}
+                width={220}
+
+              height={124}
                 className="h-20 w-auto object-contain border-t-[15px] border-b-[5px] border-black"
                 priority
 
