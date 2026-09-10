@@ -1,6 +1,8 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
+import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
+import Link from 'next/link';
 
 const testimoniosData = [
   {
@@ -95,96 +97,100 @@ const testimoniosData = [
 
 export default function TestimoniosGrid() {
   const [playingId, setPlayingId] = useState(null);
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const scrollRef = useRef(null);
 
-  // Autoplay cada 3 segundos
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % testimoniosData.length);
+      if (scrollRef.current) {
+        const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
+        if (scrollLeft + clientWidth >= scrollWidth - 10) {
+          scrollRef.current.scrollTo({ left: 0, behavior: 'smooth' });
+        } else {
+          scrollRef.current.scrollBy({ left: 400, behavior: 'smooth' });
+        }
+      }
     }, 3000);
     return () => clearInterval(interval);
   }, []);
 
-  const getVisibleItems = () => {
-    const items = [];
-    for (let i = 0; i < 3; i++) {
-      items.push(testimoniosData[(currentIndex + i) % testimoniosData.length]);
+  const scrollManual = (direction) => {
+    if (scrollRef.current) {
+      const scrollAmount = direction === 'next' ? 450 : -450;
+      scrollRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
     }
-    return items;
-  };
-
-  const nextSlide = () => {
-    setCurrentIndex((prev) => (prev + 1) % testimoniosData.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentIndex((prev) => (prev === 0 ? testimoniosData.length - 1 : prev - 1));
   };
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black text-gray-300 relative overflow-hidden">
-      <div className="max-w-7xl mx-auto space-y-12 relative z-10">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black text-white relative overflow-hidden">
+      <div className="max-w-7xl mx-auto space-y-8 relative z-10">
         
         {/* Encabezado */}
-        <div className="text-center space-y-4 max-w-2xl mx-auto">
-          <span className="inline-block text-xs font-semibold tracking-widest text-[#FF8D0F] uppercase">
-            Muro de Resultados — CONRA FBA
-          </span>
-          <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-white">
-            Lo que pasa cuando dejas de adivinar y aplicas un sistema
-          </h2>
-          <p className="text-sm md:text-base text-gray-400">
-            Videos de alumnos, capturas de chats y resultados reales de quienes ya están operando en Amazon Wholesale.
-          </p>
-        </div>
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-zinc-900 pb-6">
+          <div>
+            <span className="text-xs font-semibold tracking-widest text-[#FF8D0F] uppercase block mb-1">
+              Muro de Resultados — CONRA FBA
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white">
+              Lo que pasa cuando aplicas un sistema
+            </h2>
+          </div>
 
-        {/* Controles de Navegación del Carrusel */}
-        <div className="flex justify-end max-w-7xl mx-auto">
-          <div className="flex items-center gap-3">
-            <button
-              onClick={prevSlide}
-              className="p-3 rounded-xl bg-zinc-900 hover:bg-zinc-800 text-zinc-300 hover:text-white border border-zinc-800/80 transition-all duration-200"
-              aria-label="Anterior"
+          <div className="flex items-center gap-6">
+            <div className="flex items-center gap-2">
+              <button
+                onClick={() => scrollManual('prev')}
+                className="p-2.5 rounded-lg bg-zinc-900 hover:bg-zinc-800 text-zinc-300 hover:text-white border border-zinc-800 transition-colors cursor-pointer"
+                aria-label="Anterior"
+              >
+                <ChevronLeft className="w-5 h-5 text-[#FF8D0F]" />
+              </button>
+              <button
+                onClick={() => scrollManual('next')}
+                className="p-2.5 rounded-lg bg-zinc-900 hover:bg-zinc-800 text-zinc-300 hover:text-white border border-zinc-800 transition-colors cursor-pointer"
+                aria-label="Siguiente"
+              >
+                <ChevronRight className="w-5 h-5 text-[#FF8D0F]" />
+              </button>
+            </div>
+
+            <Link
+              href="/conra-fba/rese"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-white hover:text-[#FF8D0F] transition-colors group shrink-0"
             >
-              ◀
-            </button>
-            <button
-              onClick={nextSlide}
-              className="p-3 rounded-xl bg-zinc-900 hover:bg-zinc-800 text-zinc-300 hover:text-white border border-zinc-800/80 transition-all duration-200"
-              aria-label="Siguiente"
-            >
-              ▶
-            </button>
+              <span>Ver más casos de éxito</span>
+              <ArrowRight className="w-4 h-4 text-[#FF8D0F] transition-transform duration-300 group-hover:translate-x-1.5" />
+            </Link>
           </div>
         </div>
 
-        {/* Grilla / Carrusel */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {getVisibleItems().map((item, idx) => (
+        {/* Carrusel con tarjetas más altas modificando el contenedor a h-72 o aspect-[4/3] */}
+        <div 
+          ref={scrollRef}
+          className="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-4 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
+        >
+          {testimoniosData.map((item) => (
             <div 
-              key={`${item.id}-${idx}`}
-              className="bg-zinc-900/60 border border-zinc-800 rounded-2xl overflow-hidden shadow-xl flex flex-col justify-between hover:border-[#FF8D0F]/50 transition-all group"
+              key={item.id}
+              className="w-[320px] sm:w-[400px] lg:w-[calc(33.333%-16px)] shrink-0 flex flex-col group cursor-pointer snap-start"
             >
-              
-              {/* Contenedor Multimedia (Formato vertical 9:16) sin badges */}
-              <div className="relative w-full aspect-[9/16] bg-black overflow-hidden flex items-center justify-center">
-                
+              {/* Aquí cambiamos aspect-video por h-72 para hacerlas notablemente más altas */}
+              <div className="relative w-full h-72 sm:h-80 bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800 group-hover:border-[#FF8D0F]/50 transition-all shadow-xl">
                 {item.type === "wistia" ? (
                   item.wistiaId.startsWith("PON_AQUI") ? (
                     <a
                       href={item.targetUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="relative w-full h-full bg-black block group/vid cursor-pointer"
+                      className="relative w-full h-full block group/vid"
                     >
                       <img
                         src={item.posterUrl}
                         alt={item.title}
-                        className="w-full h-full object-contain group-hover/vid:scale-105 transition-transform duration-500"
+                        className="w-full h-full object-cover group-hover/vid:scale-105 transition-transform duration-500"
                         loading="lazy"
                       />
                       <div className="absolute inset-0 flex items-center justify-center bg-black/30 group-hover/vid:bg-black/10 transition-colors">
-                        <div className="w-16 h-16 rounded-full bg-[#FF8D0F] flex items-center justify-center shadow-xl text-black font-extrabold pl-1 transform group-hover/vid:scale-110 transition-transform">
+                        <div className="w-14 h-14 rounded-full bg-[#FF8D0F] flex items-center justify-center shadow-lg text-black font-extrabold pl-0.5 transform group-hover/vid:scale-110 transition-transform text-base">
                           ▶
                         </div>
                       </div>
@@ -197,23 +203,22 @@ export default function TestimoniosGrid() {
                           title={item.title}
                           allow="autoplay; fullscreen"
                           frameBorder="0"
-                          className="w-full h-full absolute inset-0 object-contain"
-                          allowTransparency="true"
+                          className="w-full h-full absolute inset-0 object-cover"
                         />
                       </div>
                     ) : (
                       <div 
-                        className="relative w-full h-full bg-black cursor-pointer group/vid"
+                        className="relative w-full h-full bg-black group/vid"
                         onClick={() => setPlayingId(item.id)}
                       >
                         <img
                           src={item.posterUrl}
                           alt={item.title}
-                          className="w-full h-full object-contain group-hover/vid:scale-105 transition-transform duration-500"
+                          className="w-full h-full object-cover group-hover/vid:scale-105 transition-transform duration-500"
                           loading="lazy"
                         />
                         <div className="absolute inset-0 flex items-center justify-center bg-black/30 group-hover/vid:bg-black/10 transition-colors">
-                          <div className="w-16 h-16 rounded-full bg-[#FF8D0F] flex items-center justify-center shadow-xl text-black font-extrabold pl-1 transform group-hover/vid:scale-110 transition-transform">
+                          <div className="w-14 h-14 rounded-full bg-[#FF8D0F] flex items-center justify-center shadow-lg text-black font-extrabold pl-0.5 transform group-hover/vid:scale-110 transition-transform text-base">
                             ▶
                           </div>
                         </div>
@@ -221,25 +226,22 @@ export default function TestimoniosGrid() {
                     )
                   )
                 ) : (
-                  <div className="w-full h-full bg-zinc-950 flex items-center justify-center p-4">
+                  <div className="w-full h-full bg-zinc-950 flex items-center justify-center p-2">
                     <img
                       src={item.mediaUrl}
                       alt={item.title}
-                      className="max-h-full max-w-full object-contain rounded-lg shadow-md group-hover:scale-105 transition-transform duration-500"
+                      className="w-full h-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-500"
                       loading="lazy"
                     />
                   </div>
                 )}
-
               </div>
 
-              {/* Pie de tarjeta con texto descriptivo */}
-              <div className="p-4 bg-zinc-950 border-t border-zinc-800/80">
-                <p className="text-xs md:text-sm text-gray-300 font-medium leading-snug">
+              <div className="mt-4">
+                <p className="text-sm sm:text-base text-zinc-200 font-semibold leading-snug group-hover:text-white transition-colors">
                   {item.title}
                 </p>
               </div>
-
             </div>
           ))}
         </div>
