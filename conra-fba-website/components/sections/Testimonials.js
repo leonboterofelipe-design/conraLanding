@@ -1,181 +1,247 @@
 'use client';
 
-import React, { useState } from 'react';
-import { Star, ChevronLeft, ChevronRight, ArrowRight, CheckCircle2 } from 'lucide-react';
-import Link from 'next/link';
+import React, { useState, useEffect } from 'react';
 
-export default function Testimonials() {
-  const testimonials = [
-    {
-      name: "Amanda Milian",
-      role: "Estudiante de Mentoría",
-      text: "Llevaba 3 meses en una academia donde, sinceramente, no veía avances. Me sentía estancada... Gracias a la guía de Conrado, que explica TODO paso a paso y con claridad, pude destrabarme de algo que llevaba semanas frenándome.",
-      highlight: "Facturó $7,892.08 en 3 semanas"
-    },
-    {
-      name: "Camilo Valencia",
-      role: "Estudiante de Mentoría",
-      text: "Empecé mi mentoría en Abril, en Junio cerré mis dos primeras marcas, despaché mi primera pallet y el día de ayer empezaron mis ventas, es poco pero es el Primer escalón al éxito!",
-      highlight: "2 marcas cerradas + primer pallet"
-    },
-    {
-      name: "Martina Buonocore",
-      role: "Estudiante de Mentoría",
-      text: "Quiet growth, loud results. Nuevo producto para mi tienda lanzado el viernes. 11 ventas en 48h... Ahora imaginate en 30 días.",
-      highlight: "11 ventas en sus primeras 48h"
-    },
-    {
-      name: "Ricardo Padilla",
-      role: "Estudiante de Mentoría",
-      text: "Buen día family dejando por aquí resultados de 22 días vamos rumbo a los 10k ya casi tengo que comprar nuevas unidades.",
-      highlight: "Rumbo a los $10k en 22 días"
-    },
-    {
-      name: "Yasmin Rodriguez",
-      role: "Estudiante de Mentoría",
-      text: "Se los reconozco este hombre es un ser muy lindo yo quedé contenta haber hablado con él me explico todo y tiene paciencia que eso es muy importante, Gracias Conra eres el mejor.",
-      highlight: "Acompañamiento directo"
-    },
-    {
-      name: "Paulina Rave",
-      role: "Estudiante de Mentoría",
-      text: "Estoy en el principio de tu mentoría y ya me ahorré tiempo y dinero porque estuve 4 meses sin saber que hacer!!! Gracias Conra!!!!",
-      highlight: "Ahorro de meses de estancamiento"
-    },
-  ];
+const testimoniosData = [
+  {
+    id: 1,
+    type: "wistia",
+    wistiaId: "zca9l26jg4",
+    posterUrl: "https://embed-ssl.wistia.com/deliveries/d2906312519742a9329454782304e55013e6b9f4.webp",
+    title: "Testimonio estudiante exitoso - Primer mes en Amazon",
+  },
+  {
+    id: 2,
+    type: "wistia",
+    wistiaId: "tdm64uc39c",
+    posterUrl: "https://embed-ssl.wistia.com/deliveries/85c60e39a4bd68136885eba0d68e23a602fcdeaa.webp",
+    title: "Resultados de operación - Amazon Wholesale",
+  },
+  {
+    id: 3,
+    type: "wistia",
+    wistiaId: "PON_AQUI_EL_ID_3",
+    targetUrl: "https://go.conrafba.com/reviews-conrafba",
+    posterUrl: "https://embed-ssl.wistia.com/deliveries/71658028676c2faa7adec5533c396b06a4493ef0.webp",
+    title: "Cierre exitoso de marcas y proveedores",
+  },
+  {
+    id: 4,
+    type: "wistia",
+    wistiaId: "PON_AQUI_EL_ID_4",
+    targetUrl: "https://go.conrafba.com/reviews-conrafba",
+    posterUrl: "https://embed-ssl.wistia.com/deliveries/4c7c2ee36254797d874ff19f79d830cce88d503a.webp",
+    title: "Dashboard de ventas y métricas en vivo",
+  },
+  {
+    id: 5,
+    type: "wistia",
+    wistiaId: "PON_AQUI_EL_ID_5",
+    targetUrl: "https://go.conrafba.com/reviews-conrafba",
+    posterUrl: "https://embed-ssl.wistia.com/deliveries/119d55ac5fa89a014acecaf04ace172e286f03ec.webp",
+    title: "Mentoría personalizada y acompañamiento",
+  },
+  {
+    id: 6,
+    type: "wistia",
+    wistiaId: "PON_AQUI_EL_ID_6",
+    targetUrl: "https://go.conrafba.com/reviews-conrafba",
+    posterUrl: "https://embed-ssl.wistia.com/deliveries/672259b3d4252bf26304c34a2399bf4d745a5d4f.webp",
+    title: "Caso de éxito verificado en la comunidad",
+  },
+  {
+    id: 7,
+    type: "image",
+    mediaUrl: "https://assets.cdn.filesafe.space/SG0TKpTDkPoBscNii52K/media/6a0df80507a34aa07f808352.jpeg",
+    title: "Mensaje de bienvenida CONRA FBA",
+  },
+  {
+    id: 8,
+    type: "image",
+    mediaUrl: "https://assets.cdn.filesafe.space/SG0TKpTDkPoBscNii52K/media/6a178ff8c460f23b3af61ff9.jpg",
+    title: "Métricas y capturas reales de operaciones en Amazon Wholesale",
+  },
+  {
+    id: 9,
+    type: "image",
+    mediaUrl: "https://assets.cdn.filesafe.space/SG0TKpTDkPoBscNii52K/media/6a720b28670a4ee78332fa14.png",
+    title: "Primer mes de operación - Resultados verificados",
+  },
+  {
+    id: 10,
+    type: "image",
+    mediaUrl: "https://assets.cdn.filesafe.space/SG0TKpTDkPoBscNii52K/media/6a71f49ba86d6ec90cbdc9b9.jpg",
+    title: "Cierre de operaciones - Testimonio de estudiante",
+  },
+  {
+    id: 11,
+    type: "image",
+    mediaUrl: "https://assets.cdn.filesafe.space/SG0TKpTDkPoBscNii52K/media/6a71f862df32aa3e16cdb7da.jpg",
+    title: "Dashboard de ventas - Seguimiento en tiempo real",
+  },
+  {
+    id: 12,
+    type: "image",
+    mediaUrl: "https://assets.cdn.filesafe.space/SG0TKpTDkPoBscNii52K/media/6a720b4bdf32aa3e160052b5.png",
+    title: "Mentor verificando progreso con estudiante",
+  },
+  {
+    id: 13,
+    type: "image",
+    mediaUrl: "https://assets.cdn.filesafe.space/SG0TKpTDkPoBscNii52K/media/6a720c87df422bfa870fab0c.jpeg",
+    title: "Estudiantes exitosos del programa CONRA FBA",
+  },
+];
 
+export default function TestimoniosGrid() {
+  const [playingId, setPlayingId] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const prevSlide = () => {
-    setCurrentIndex((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1));
+  // Autoplay cada 3 segundos
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % testimoniosData.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const getVisibleItems = () => {
+    const items = [];
+    for (let i = 0; i < 3; i++) {
+      items.push(testimoniosData[(currentIndex + i) % testimoniosData.length]);
+    }
+    return items;
   };
 
   const nextSlide = () => {
-    setCurrentIndex((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1));
+    setCurrentIndex((prev) => (prev + 1) % testimoniosData.length);
   };
 
-  // Mostrar 3 elementos en desktop
-  const visibleTestimonials = [
-    testimonials[currentIndex],
-    testimonials[(currentIndex + 1) % testimonials.length],
-    testimonials[(currentIndex + 2) % testimonials.length],
-  ];
+  const prevSlide = () => {
+    setCurrentIndex((prev) => (prev === 0 ? testimoniosData.length - 1 : prev - 1));
+  };
 
   return (
-    <section id="testimonios" className="py-28 px-4 sm:px-6 lg:px-8 bg-zinc-950 text-white relative overflow-hidden">
-      
-      {/* Fondo sutil de iluminación ambiental (sin recargarlo) */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-[#FF8D0F]/5 blur-[120px] pointer-events-none rounded-full" />
-
-      <div className="max-w-7xl mx-auto relative z-10">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black text-gray-300 relative overflow-hidden">
+      <div className="max-w-7xl mx-auto space-y-12 relative z-10">
         
-        {/* Encabezado Editorial */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
-          <div className="space-y-3 max-w-2xl">
-            <div className="inline-flex items-center gap-2 text-xs font-medium tracking-widest text-[#FF8D0F] uppercase">
-              <span className="w-2 h-2 rounded-full bg-[#FF8D0F]" />
-              Comunidad CONRA FBA
-            </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white">
-              Resultados reales de <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-zinc-200 to-zinc-400">
-                estudiantes activos.
-              </span>
-            </h2>
-          </div>
+        {/* Encabezado */}
+        <div className="text-center space-y-4 max-w-2xl mx-auto">
+          <span className="inline-block text-xs font-semibold tracking-widest text-[#FF8D0F] uppercase">
+            Muro de Resultados — CONRA FBA
+          </span>
+          <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-white">
+            Lo que pasa cuando dejas de adivinar y aplicas un sistema
+          </h2>
+          <p className="text-sm md:text-base text-gray-400">
+            Videos de alumnos, capturas de chats y resultados reales de quienes ya están operando en Amazon Wholesale.
+          </p>
+        </div>
 
-          {/* Controles de Navegación Superior */}
+        {/* Controles de Navegación del Carrusel */}
+        <div className="flex justify-end max-w-7xl mx-auto">
           <div className="flex items-center gap-3">
             <button
               onClick={prevSlide}
               className="p-3 rounded-xl bg-zinc-900 hover:bg-zinc-800 text-zinc-300 hover:text-white border border-zinc-800/80 transition-all duration-200"
               aria-label="Anterior"
             >
-              <ChevronLeft className="w-5 h-5" />
+              ◀
             </button>
             <button
               onClick={nextSlide}
               className="p-3 rounded-xl bg-zinc-900 hover:bg-zinc-800 text-zinc-300 hover:text-white border border-zinc-800/80 transition-all duration-200"
               aria-label="Siguiente"
             >
-              <ChevronRight className="w-5 h-5" />
+              ▶
             </button>
           </div>
         </div>
 
-        {/* Grid de Testimonios */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-          {visibleTestimonials.map((test, idx) => (
-            <div
-              key={idx}
-              className="group bg-zinc-900/40 backdrop-blur-sm border border-zinc-800/70 rounded-2xl p-8 flex flex-col justify-between hover:border-zinc-700/80 transition-all duration-300 hover:-translate-y-1 shadow-lg shadow-black/40"
+        {/* Grilla / Carrusel */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {getVisibleItems().map((item, idx) => (
+            <div 
+              key={`${item.id}-${idx}`}
+              className="bg-zinc-900/60 border border-zinc-800 rounded-2xl overflow-hidden shadow-xl flex flex-col justify-between hover:border-[#FF8D0F]/50 transition-all group"
             >
-              <div>
-                {/* Metadatos superiores */}
-                <div className="flex items-center justify-between mb-6">
-                  <div className="flex gap-1">
-                    {[1, 2, 3, 4, 5].map((star) => (
-                      <Star
-                        key={star}
-                        className="w-3.5 h-3.5 text-[#FF8D0F] fill-[#FF8D0F]"
+              
+              {/* Contenedor Multimedia (Formato vertical 9:16) sin badges */}
+              <div className="relative w-full aspect-[9/16] bg-black overflow-hidden flex items-center justify-center">
+                
+                {item.type === "wistia" ? (
+                  item.wistiaId.startsWith("PON_AQUI") ? (
+                    <a
+                      href={item.targetUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="relative w-full h-full bg-black block group/vid cursor-pointer"
+                    >
+                      <img
+                        src={item.posterUrl}
+                        alt={item.title}
+                        className="w-full h-full object-contain group-hover/vid:scale-105 transition-transform duration-500"
+                        loading="lazy"
                       />
-                    ))}
+                      <div className="absolute inset-0 flex items-center justify-center bg-black/30 group-hover/vid:bg-black/10 transition-colors">
+                        <div className="w-16 h-16 rounded-full bg-[#FF8D0F] flex items-center justify-center shadow-xl text-black font-extrabold pl-1 transform group-hover/vid:scale-110 transition-transform">
+                          ▶
+                        </div>
+                      </div>
+                    </a>
+                  ) : (
+                    playingId === item.id ? (
+                      <div className="w-full h-full relative bg-black">
+                        <iframe
+                          src={`https://fast.wistia.com/embed/iframe/${item.wistiaId}?seo=false&videoFoam=true&autoPlay=true`}
+                          title={item.title}
+                          allow="autoplay; fullscreen"
+                          frameBorder="0"
+                          className="w-full h-full absolute inset-0 object-contain"
+                          allowTransparency="true"
+                        />
+                      </div>
+                    ) : (
+                      <div 
+                        className="relative w-full h-full bg-black cursor-pointer group/vid"
+                        onClick={() => setPlayingId(item.id)}
+                      >
+                        <img
+                          src={item.posterUrl}
+                          alt={item.title}
+                          className="w-full h-full object-contain group-hover/vid:scale-105 transition-transform duration-500"
+                          loading="lazy"
+                        />
+                        <div className="absolute inset-0 flex items-center justify-center bg-black/30 group-hover/vid:bg-black/10 transition-colors">
+                          <div className="w-16 h-16 rounded-full bg-[#FF8D0F] flex items-center justify-center shadow-xl text-black font-extrabold pl-1 transform group-hover/vid:scale-110 transition-transform">
+                            ▶
+                          </div>
+                        </div>
+                      </div>
+                    )
+                  )
+                ) : (
+                  <div className="w-full h-full bg-zinc-950 flex items-center justify-center p-4">
+                    <img
+                      src={item.mediaUrl}
+                      alt={item.title}
+                      className="max-h-full max-w-full object-contain rounded-lg shadow-md group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
+                    />
                   </div>
-                  <span className="text-[11px] font-medium tracking-wide text-zinc-400 bg-zinc-800/60 px-2.5 py-1 rounded-md border border-zinc-700/50">
-                    Verificado
-                  </span>
-                </div>
+                )}
 
-                {/* Logro Destacado */}
-                <div className="mb-4">
-                  <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#FF8D0F]">
-                    <CheckCircle2 className="w-4 h-4" />
-                    {test.highlight}
-                  </span>
-                </div>
+              </div>
 
-                {/* Texto */}
-                <p className="text-zinc-300 text-sm md:text-base leading-relaxed mb-8 font-normal">
-                  &ldquo;{test.text}&rdquo;
+              {/* Pie de tarjeta con texto descriptivo */}
+              <div className="p-4 bg-zinc-950 border-t border-zinc-800/80">
+                <p className="text-xs md:text-sm text-gray-300 font-medium leading-snug">
+                  {item.title}
                 </p>
               </div>
 
-              {/* Autor */}
-              <div className="flex items-center gap-3.5 pt-6 border-t border-zinc-800/60">
-                <div className="w-10 h-10 bg-zinc-800 rounded-full flex items-center justify-center font-bold text-sm text-zinc-200 border border-zinc-700/50">
-                  {test.name.charAt(0)}
-                </div>
-                <div>
-                  <h4 className="font-semibold text-zinc-100 text-sm">{test.name}</h4>
-                  <p className="text-xs text-zinc-400">{test.role}</p>
-                </div>
-              </div>
             </div>
           ))}
-        </div>
-
-        {/* Indicadores de Paginación y CTA inferior */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-6 pt-6 border-t border-zinc-900">
-          <div className="flex gap-1.5">
-            {testimonials.map((_, idx) => (
-              <button
-                key={idx}
-                onClick={() => setCurrentIndex(idx)}
-                className={`h-1.5 rounded-full transition-all duration-300 ${
-                  currentIndex === idx ? 'w-6 bg-[#FF8D0F]' : 'w-1.5 bg-zinc-800 hover:bg-zinc-700'
-                }`}
-                aria-label={`Ir al testimonio ${idx + 1}`}
-              />
-            ))}
-          </div>
-
-          <Link
-            href="/conra-fba/rese"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-zinc-300 hover:text-white transition-colors group"
-          >
-            Ver todos los casos de éxito en la comunidad
-            <ArrowRight className="w-4 h-4 text-[#FF8D0F] transition-transform group-hover:translate-x-1" />
-          </Link>
         </div>
 
       </div>
