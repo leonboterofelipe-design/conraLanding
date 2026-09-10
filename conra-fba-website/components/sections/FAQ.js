@@ -5,30 +5,48 @@ import { ChevronDown } from 'lucide-react';
 export default function FAQ() {
   const faqs = [
     {
-      q: '¿Me quedaré solo después de ingresar?',
-      a: 'No. Es una mentoría de 12 semanas. Además del contenido paso a paso, tendrás sesiones de acompañamiento 1:1, espacios para resolver dudas y soporte de nuestro equipo.',
+      q: '¿Qué modelo de negocio enseña CONRA FBA?',
+      a: 'CONRA FBA enseña Amazon Wholesale. Aprendés a comprar productos existentes de marcas reconocidas a marcas, distribuidores y proveedores oficiales para posteriormente comercializarlos dentro de Amazon, sin necesidad de inventar un producto o fabricar en China.',
     },
     {
-      q: '¿Necesito vivir en Estados Unidos para vender en Amazon?',
-      a: 'No necesariamente. Te enseñamos cómo crear tu estructura (LLC), abrir cuentas bancarias en USA y utilizar centros de preparación (Prep Centers) para operar desde tu país.',
+      q: '¿Tengo que crear mi propia marca o producto?',
+      a: 'No. La metodología se enfoca completamente en encontrar oportunidades sobre productos de marcas reconocidas que ya se venden y tienen demanda comprobada en Amazon.',
     },
     {
-      q: '¿Necesito comenzar con una gran cantidad de dinero?',
-      a: 'Para Wholesale se requiere un capital de inversión inicial mayor que en arbitraje (recomendamos al menos $2,000 - $3,000 USD exclusivos para inventario), ya que compramos directo a distribuidores y hay mínimos de orden.',
+      q: '¿Me ayudan personalmente o solamente recibo videos?',
+      a: 'No te dejamos solo con videos. Una de las principales diferencias es el acompañamiento personalizado 1:1 durante 12 semanas con un mentor que guía tus decisiones y revisa tus números. Además, contás con clases grupales semanales, comunidad privada y nuestro GPT de Inteligencia Artificial exclusivo.',
     },
     {
-      q: '¿Qué diferencia a CONRA FBA de otras academias?',
-      a: 'Que Conrado Loaldi opera un negocio real de Amazon Wholesale todos los días. No somos solo "vendedores de cursos". Te mostramos estrategias reales, actualizadas y con acompañamiento personalizado.',
+      q: '¿Puedo entrar si nunca vendí en Amazon?',
+      a: 'Sí. CONRA FBA está diseñado para poder comenzar desde cero, guiándote paso a paso en todo el proceso de apertura y operación, sin requerir experiencia previa.',
+    },
+    {
+      q: '¿Cuánto dinero necesito para empezar?',
+      a: 'Empezar en Amazon Wholesale requiere inversión de tiempo, energía y capital. Nuestra recomendación habitual es contar con alrededor de $2,000 USD para cubrir la formación, inventario inicial, herramientas, software y gastos básicos para poner en marcha el negocio.',
+    },
+    {
+      q: '¿Puedo hacerlo si vivo fuera de Estados Unidos?',
+      a: 'Sí. No necesitás vivir físicamente en Estados Unidos para desarrollar una operación de Amazon. Te enseñamos cómo estructurar tu negocio (LLC), abrir cuentas y utilizar centros de preparación (Prep Centers).',
+    },
+    {
+      q: '¿Es un método para hacer dinero rápido?',
+      a: 'No. Construir un negocio real requiere capital, tiempo, criterio, disciplina y ejecución. Si buscás resultados mágicos o dinero sin trabajar, este programa no es para vos.',
     },
   ];
 
   return (
-    <section id="faq" className="py-24 px-4 sm:px-6 lg:px-8 bg-white">
+    <section id="faq" className="py-28 px-4 sm:px-6 lg:px-8 bg-white relative">
       <div className="max-w-3xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-black text-dark mb-4">
-            Preguntas <span className="text-brand-600">Frecuentes</span>
+        <div className="text-center mb-16 space-y-4">
+          <span className="inline-block text-xs font-semibold tracking-widest text-[#FF8D0F] uppercase">
+            Resolvé tus dudas
+          </span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-zinc-900 tracking-tight">
+            Preguntas <span className="text-[#FF8D0F]">Frecuentes</span>
           </h2>
+          <p className="text-base sm:text-lg text-zinc-600 leading-relaxed font-normal">
+            Todo lo que necesitas saber sobre el programa, el modelo de negocio y el acompañamiento.
+          </p>
         </div>
 
         <div className="space-y-4">
@@ -45,20 +63,20 @@ function FAQItem({ question, answer }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="border border-slate-200 rounded-xl overflow-hidden">
+    <div className="border border-zinc-200/80 rounded-2xl overflow-hidden transition-all duration-300 hover:border-zinc-300 bg-zinc-50/50">
       <button
-        className="w-full px-6 py-4 text-left flex justify-between items-center bg-slate-50 hover:bg-slate-100 transition-colors"
+        className="w-full px-6 py-5 text-left flex justify-between items-center gap-4 bg-transparent hover:bg-zinc-100/60 transition-colors"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <span className="font-bold text-dark">{question}</span>
-        <ChevronDown
-          className={`w-5 h-5 text-slate-500 transition-transform ${
-            isOpen ? 'rotate-180' : ''
-          }`}
-        />
+        <span className="font-bold text-zinc-900 text-sm sm:text-base">{question}</span>
+        <div className={`w-8 h-8 rounded-full bg-white border border-zinc-200 flex items-center justify-center shrink-0 transition-transform duration-300 ${
+          isOpen ? 'rotate-180 border-[#FF8D0F]/40 text-[#FF8D0F]' : 'text-zinc-500'
+        }`}>
+          <ChevronDown className="w-4 h-4" />
+        </div>
       </button>
       {isOpen && (
-        <div className="px-6 py-4 bg-white text-slate-600 leading-relaxed border-t border-slate-100">
+        <div className="px-6 pb-6 pt-2 bg-transparent text-zinc-600 text-sm sm:text-base leading-relaxed border-t border-zinc-200/40">
           {answer}
         </div>
       )}
