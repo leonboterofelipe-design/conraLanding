@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { ArrowRight, CheckCircle2 } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 
 export default function CTA() {
@@ -11,20 +11,20 @@ export default function CTA() {
     {
       id: 0,
       label: "Es mi primera vez vendiendo en Amazon",
-      title: "Construye tu primer negocio desde cero con acompañamiento 1:1",
-      description: "Evaluaremos tu situación actual y veremos si eres el candidato ideal para nuestra Mentoría de 12 Semanas en Wholesale, asegurando que evites errores costosos en tus primeros pasos sin necesidad de experiencia previa."
+      title: "Construye tu primer negocio de Amazon Wholesale desde cero",
+      description: "CONRA FBA está diseñado para que puedas comenzar sin experiencia previa. Te guiamos paso a paso con acompañamiento 1:1 durante 12 semanas para que aprendas a tomar decisiones de negocio seguras."
     },
     {
       id: 1,
       label: "Quiero hacer Amazon Wholesale",
-      title: "Domina el modelo Wholesale trabajando con marcas oficiales",
-      description: "Deja atrás las complicaciones de fabricar productos propios o depender de arbitrajes inestables. Te mostramos cómo conectar directamente con distribuidores y marcas consolidadas."
+      title: "Vende productos de marcas reconocidas sin crear productos propios",
+      description: "Olvídate de inventar o fabricar productos desde cero. Aprende a trabajar directamente con marcas, distribuidores oficiales y proveedores legítimos analizando la demanda con números reales."
     },
     {
       id: 2,
       label: "Ya vendo y busco escalar",
-      title: "Lleva tu operación actual al siguiente nivel con un método basado en números",
-      description: "Especial para quienes ya operan pero necesitan estructurar un negocio profesional, optimizar su capital de inventario y asegurar relaciones comerciales estables a largo plazo."
+      title: "Estructura y haz crecer tu operación actual con un método profesional",
+      description: "Ideal si ya vendes en Amazon pero dependes de ofertas, liquidaciones o intermediarios. Te ayudamos a consolidar relaciones estables con proveedores y construir un negocio organizado y basado en números."
     }
   ];
 
@@ -33,19 +33,22 @@ export default function CTA() {
   return (
     <section id="agenda" className="py-24 px-4 sm:px-6 lg:px-8 bg-slate-50 text-slate-900 relative overflow-hidden">
       
-      {/* Elemento decorativo sutil de fondo para profundidad */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-96 bg-gradient-to-b from-orange-500/5 to-transparent pointer-events-none" />
+      {/* Detalle visual elegante con sutil iluminación en tonos corporativos */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-96 bg-gradient-to-b from-[#FF8D0F]/10 to-transparent pointer-events-none" />
 
       <div className="max-w-4xl mx-auto space-y-12 relative z-10">
         
-        {/* Banner Superior Estilo Amazon (inspirado en la referencia visual) */}
+        {/* Banner Superior Estilo Amazon adaptado a CONRA FBA */}
         <div className="bg-white border border-slate-200/80 rounded-2xl p-6 sm:p-8 shadow-sm border-l-4 border-l-[#FF8D0F] relative overflow-hidden">
           <div className="max-w-2xl space-y-2">
+            <span className="text-[11px] font-mono font-bold tracking-widest text-[#FF8D0F] uppercase">
+              Mentoría Oficial CONRA FBA
+            </span>
             <h3 className="text-base sm:text-lg font-bold text-slate-900 tracking-tight">
-              ¿Listo para escalar tu negocio en Amazon con un método probado?
+              ¿Listo para construir un negocio real de Amazon Wholesale acompañado por expertos?
             </h3>
             <p className="text-sm text-slate-600 leading-relaxed">
-              Agenda una llamada gratuita con nuestro equipo. Evaluaremos tu situación real y definiremos el mejor camino para tu operación.
+              Conocé cómo funciona CONRA FBA y descubrí si el programa tiene sentido para vos agendando una llamada directa con nuestro equipo.
             </p>
           </div>
           <div className="mt-4 pt-4 border-t border-slate-100 flex items-center">
@@ -55,16 +58,16 @@ export default function CTA() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-[#FF8D0F] hover:text-orange-600 transition-colors group"
             >
-              <span>Explorar fechas disponibles en el calendario</span>
+              <span>Agendar llamada directa de evaluación</span>
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </a>
           </div>
         </div>
 
-        {/* Selector de Opciones Interactivo (Pills / Radio estético) */}
+        {/* Selector Interactivo (Pills / Radio con identidad propia de CONRA FBA) */}
         <div className="space-y-4 text-center">
           <p className="text-xs sm:text-sm font-semibold text-slate-500 uppercase tracking-widest">
-            Elige la opción que mejor se adapte a tu negocio:
+            Elige la opción que mejor se adapte a tu momento actual:
           </p>
 
           <div className="flex flex-wrap justify-center gap-3">
@@ -89,12 +92,12 @@ export default function CTA() {
           </div>
         </div>
 
-        {/* Tarjeta Editorial Central con Fondo Blanco */}
+        {/* Tarjeta Central con Fondo Blanco, limpia y profesional */}
         <div className="bg-white p-8 md:p-12 rounded-3xl shadow-xl shadow-slate-950/[0.04] border border-slate-200/80 text-center max-w-3xl mx-auto space-y-6 transition-all duration-300">
           
           <div className="space-y-3">
             <span className="inline-block text-[11px] font-mono font-bold tracking-widest text-[#FF8D0F] uppercase bg-orange-50 px-3 py-1 rounded-full border border-orange-100">
-              Mentoría de 12 Semanas en Wholesale
+              CONRA FBA — Wholesale & Mentoría 1:1
             </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight leading-snug">
               {currentContent.title}
@@ -111,12 +114,12 @@ export default function CTA() {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 w-full sm:w-auto bg-[#FF8D0F] hover:bg-[#e07b0d] text-slate-950 font-extrabold px-10 py-4 rounded-2xl transition-all duration-300 shadow-lg shadow-orange-500/20 hover:shadow-orange-500/30 hover:-translate-y-0.5 text-sm sm:text-base"
             >
-              <span>SOLICITAR ACCESO AHORA</span>
+              <span>AGENDA UNA LLAMADA</span>
               <ArrowRight className="w-5 h-5" />
             </a>
             
             <p className="text-xs text-slate-400 font-medium">
-              * No hay compromiso de compra durante la llamada de evaluación.
+              * No hay compromiso de compra durante la llamada. Descubrí si el programa tiene sentido para vos.
             </p>
           </div>
 
