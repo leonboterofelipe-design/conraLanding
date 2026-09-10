@@ -1,61 +1,75 @@
 import React from 'react';
-import { Users, ShoppingCart, Target, TrendingUp } from 'lucide-react';
+import { ShoppingCart, UserCheck, BarChart3, Layers } from 'lucide-react';
 
 export default function ProgramDetails() {
   const benefits = [
     {
-      icon: <ShoppingCart className="w-8 h-8 text-brand-600" />,
-      title: 'No es Arbitraje al Detal',
+      icon: <ShoppingCart className="w-8 h-8 text-[#FF8D0F]" />,
+      title: 'Trato Directo con Marcas',
       description:
-        'Dejamos de buscar ofertas en tiendas minoristas. Te enseñamos a comprar directamente a marcas y distribuidores oficiales a precios de mayorista.',
+        'Sin intermediarios ni complicaciones. Te enseñamos a abrir cuentas y comprar directamente a marcas y distribuidores oficiales a precios de mayorista.',
     },
     {
-      icon: <TrendingUp className="w-8 h-8 text-brand-600" />,
-      title: 'Modelo Escalable',
+      icon: <UserCheck className="w-8 h-8 text-[#FF8D0F]" />,
+      title: 'Acompañamiento 1:1 de 12 Semanas',
       description:
-        'El modelo Wholesale te permite reabastecer inventario con un clic. Construye un negocio predecible y con mayor capacidad de crecimiento.',
+        'No te dejamos solo con una biblioteca de videos. Un mentor trabaja de la mano contigo semana a semana para guiar tus decisiones, revisar tus números y evitar errores costosos.',
     },
     {
-      icon: <Users className="w-8 h-8 text-brand-600" />,
-      title: 'Cuentas Mayoristas Reales',
+      icon: <BarChart3 className="w-8 h-8 text-[#FF8D0F]" />,
+      title: 'Criterio y Decisiones de Negocio',
       description:
-        'Aprende el guion exacto y los requisitos legales para abrir cuentas con distribuidores autorizados en Estados Unidos, incluso si eres extranjero.',
+        'No formamos simples operadores, sino empresarios. Aprende a analizar demanda, márgenes, ROI, competencia y la Buy Box con números reales antes de invertir tu capital.',
     },
     {
-      icon: <Target className="w-8 h-8 text-brand-600" />,
-      title: 'Mentoría de 12 Semanas',
+      icon: <Layers className="w-8 h-8 text-[#FF8D0F]" />,
+      title: 'Ecosistema de Soporte Integral',
       description:
-        'Acompañamiento 1:1 intensivo. No te dejamos solo con videos grabados; trabajamos de la mano en tu negocio semana a semana.',
+        'Accede a nuestra biblioteca paso a paso, clases grupales semanales con coaches expertos, comunidad privada de alumnos y nuestro GPT de Inteligencia Artificial exclusivo.',
     },
   ];
 
   return (
     <section id="mentoria" className="py-24 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-black text-dark mb-4">
-            La Mentoría de <span className="text-brand-600">Amazon Wholesale</span>
+        
+        {/* Encabezado */}
+        <div className="text-center mb-16 space-y-4">
+          <span className="text-[#FF8D0F] font-bold tracking-wider uppercase text-xs px-3.5 py-1.5 bg-[#FF8D0F]/10 rounded-full border border-[#FF8D0F]/20">
+            El Sistema CONRA FBA
+          </span>
+          <h2 className="text-3xl md:text-5xl font-black text-gray-900 tracking-tight">
+            Por qué <span className="text-[#FF8D0F]">CONRA FBA</span> es diferente a todo lo demás
           </h2>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            Un programa intensivo diseñado para transformar tu forma de vender,
-            enfocándonos en estrategias de marcas reconocidas.
+          <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+            Construye y opera un negocio real de Amazon Wholesale con un método estructurado, basado en números y respaldado por mentoría personalizada.
           </p>
         </div>
 
+        {/* Tarjetas de pilares */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {benefits.map((benefit, index) => (
             <div
               key={index}
-              className="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-lg transition-shadow"
+              className="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:border-[#FF8D0F]/40 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
             >
-              <div className="bg-brand-50 w-16 h-16 rounded-xl flex items-center justify-center mb-6">
-                {benefit.icon}
+              <div>
+                <div className="bg-[#FF8D0F]/10 w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#FF8D0F] transition-colors duration-300">
+                  <div className="group-hover:text-white transition-colors duration-300 text-[#FF8D0F]">
+                    {benefit.icon}
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  {benefit.title}
+                </h3>
+                <p className="text-slate-600 text-sm leading-relaxed">
+                  {benefit.description}
+                </p>
               </div>
-              <h3 className="text-xl font-bold text-dark mb-3">{benefit.title}</h3>
-              <p className="text-slate-600 leading-relaxed">{benefit.description}</p>
             </div>
           ))}
         </div>
+
       </div>
     </section>
   );
