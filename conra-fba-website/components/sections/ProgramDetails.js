@@ -38,7 +38,7 @@ export default function ProgramDetails() {
       <div className="max-w-7xl mx-auto">
         
         {/* Encabezado Centrado */}
-        <div className="max-w-3xl mx-auto text-center mb-20 space-y-4">
+        <div className="max-w-3xl mx-auto text-center mb-12 sm:mb-20 space-y-4">
           <span className="inline-block text-xs font-semibold tracking-widest text-[#FF8D0F] uppercase">
             El Sistema CONRA FBA
           </span>
@@ -50,36 +50,37 @@ export default function ProgramDetails() {
           </p>
         </div>
 
-        {/* Grid de Pilares */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* Grid de Pilares: 2 columnas en móvil (grid-cols-2) y 4 en desktop (lg:grid-cols-4) */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {benefits.map((benefit, index) => (
             <div
               key={index}
-              className="group bg-zinc-50/60 hover:bg-white border border-zinc-200/80 hover:border-zinc-300 rounded-2xl p-8 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:shadow-zinc-950/[0.03] relative"
+              className="group bg-zinc-50/60 hover:bg-white border border-zinc-200/80 hover:border-zinc-300 rounded-2xl p-5 sm:p-8 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:shadow-zinc-950/[0.03] relative"
             >
               <div>
                 {/* Cabecera de la tarjeta: Ícono y Numeración Editorial */}
-                <div className="flex items-center justify-between mb-8">
-                  <div className="w-11 h-11 rounded-xl bg-white border border-zinc-200/80 flex items-center justify-center shadow-xs">
+                <div className="flex items-center justify-between mb-4 sm:mb-8">
+                  <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-xl bg-white border border-zinc-200/80 flex items-center justify-center shadow-xs">
                     {benefit.icon}
                   </div>
-                  <span className="text-xs font-mono font-semibold text-zinc-400 tracking-wider">
+                  <span className="text-[11px] sm:text-xs font-mono font-semibold text-zinc-400 tracking-wider">
                     {benefit.number}
                   </span>
                 </div>
 
-                <h3 className="text-lg font-bold text-zinc-900 mb-3 tracking-tight">
+                <h3 className="text-sm sm:text-lg font-bold text-zinc-900 mb-2 sm:mb-3 tracking-tight">
                   {benefit.title}
                 </h3>
-                <p className="text-zinc-600 text-sm leading-relaxed font-normal">
+                <p className="text-zinc-600 text-xs sm:text-sm leading-relaxed font-normal">
                   {benefit.description}
                 </p>
               </div>
 
               {/* Pie de tarjeta sutil */}
-              <div className="pt-6 mt-6 border-t border-zinc-200/40 flex items-center justify-between text-xs font-medium text-zinc-400 group-hover:text-zinc-900 transition-colors">
-                <span>Pilar fundamental</span>
-                <span className="w-1.5 h-1.5 rounded-full bg-[#FF8D0F] opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="pt-4 sm:pt-6 mt-4 sm:mt-6 border-t border-zinc-200/40 flex items-center justify-between text-[11px] sm:text-xs font-medium text-zinc-400 group-hover:text-zinc-900 transition-colors">
+                <span className="hidden sm:inline">Pilar fundamental</span>
+                <span className="sm:hidden">Pilar</span>
+                <span className="w-1.5 h-1.5 rounded-full bg-[#FF8D0F] opacity-0 group-hover:opacity-100 transition-opacity"  />
               </div>
             </div>
           ))}
@@ -88,4 +89,5 @@ export default function ProgramDetails() {
       </div>
     </section>
   );
-}
+} 
+
