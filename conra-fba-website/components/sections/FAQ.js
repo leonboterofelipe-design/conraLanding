@@ -35,7 +35,7 @@ export default function FAQ() {
   ];
 
   return (
-    <section id="faq" className="py-28 px-4 sm:px-6 lg:px-8 bg-white relative">
+    <section id="faq" className="py-[20px] px-4 sm:px-6 lg:px-8 bg-white relative">
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-16 space-y-4">
           <span className="inline-block text-xs font-semibold tracking-widest text-[#FF8D0F] uppercase">

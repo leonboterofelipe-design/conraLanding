@@ -3,22 +3,34 @@ import Image from 'next/image';
 
 export default function HeroVSL() {
   return (
-    <section className="relative h-[75vh] min-h-[480px] max-h-[700px] flex items-center justify-center text-white overflow-hidden px-4 sm:px-6 pt-16">
+    <section className="relative h-[90vh] min-h-[480px] max-h-[700px] flex items-center justify-center text-white overflow-hidden px-4 sm:px-6 pt-16">
       
-      {/* Imagen de fondo panorámica con cobertura total */}
-      <div className="absolute inset-0 z-0 overflow-hidden">
+      {/* Imagen de fondo exclusiva para dispositivos móviles */}
+      <div className="absolute inset-0 z-0 overflow-hidden block md:hidden">
         <Image
-          src="/assets/banner.jpg"
-          alt="Banner CONRA FBA"
+          src="/assets/images/bannerM.png"
+          alt="Banner CONRA FBA Movil"
           fill
           priority
-          className="object-cover object-center scale-105 animate-pulse duration-[10000ms]"
+          className="object-cover object-center"
         />
-        {/* Capa de opacidad oscura (overlay) para máxima legibilidad */}
-        <div className="absolute inset-0 bg-black/80 backdrop-blur-[2px]" />
       </div>
 
-      {/* Contenido principal del Hero optimizado para la altura del 75% */}
+      {/* Imagen de fondo exclusiva para computadoras y pantallas grandes */}
+      <div className="absolute inset-0 z-0 overflow-hidden hidden md:block">
+        <Image
+          src="/assets/banner.jpg"
+          alt="Banner CONRA FBA Desktop"
+          fill
+          priority
+          className="object-cover object-center"
+        />
+      </div>
+
+      {/* Capa de opacidad oscura (overlay) común para máxima legibilidad en ambos dispositivos */}
+      <div className="absolute inset-0 z-[1] bg-black/80 backdrop-blur-[2px]" />
+
+      {/* Contenido principal del Hero */}
       <div className="max-w-4xl mx-auto text-center relative z-10 space-y-4 sm:space-y-6">
         
         <h1 className="text-2xl sm:text-4xl md:text-5xl font-black leading-tight tracking-tight">

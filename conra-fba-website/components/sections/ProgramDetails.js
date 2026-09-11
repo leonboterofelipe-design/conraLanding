@@ -34,7 +34,7 @@ export default function ProgramDetails() {
   ];
 
   return (
-    <section id="mentoria" className="py-28 px-4 sm:px-6 lg:px-8 bg-white relative">
+    <section id="mentoria" className="py-[20px] px-4 sm:px-6 lg:px-8 bg-white relative">
       <div className="max-w-7xl mx-auto">
         
         {/* Encabezado Centrado */}
