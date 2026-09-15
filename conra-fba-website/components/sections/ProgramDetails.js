@@ -13,7 +13,7 @@ export default function ProgramDetails() {
     {
       number: "02",
       icon: <UserCheck className="w-5 h-5 text-[#FF8D0F]" />,
-      title: 'Acompañamiento 1:1 de 12 Semanas',
+      title: 'Acompañamiento 1:1',
       description:
         'No te dejamos solo con una biblioteca de videos. Un mentor trabaja de la mano contigo semana a semana para guiar tus decisiones, revisar tus números y evitar errores costosos.',
     },
@@ -40,7 +40,7 @@ export default function ProgramDetails() {
         {/* Encabezado Centrado */}
         <div className="max-w-3xl mx-auto text-center mb-12 sm:mb-20 space-y-4">
           <span className="inline-block text-xs font-semibold tracking-widest text-[#FF8D0F] uppercase">
-            El Sistema CONRA FBA
+            El Sistema Amazon Direct Academy (ADA)
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-zinc-900 tracking-tight">
             Por qué <span className="text-[#FF8D0F]">ADA</span> es diferente a todo lo demás.
@@ -89,5 +89,4 @@ export default function ProgramDetails() {
       </div>
     </section>
   );
-} 
-
+}

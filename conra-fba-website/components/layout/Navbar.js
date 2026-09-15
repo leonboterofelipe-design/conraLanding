@@ -123,7 +123,7 @@ export default function Navbar() {
       rel="noopener noreferrer"
       className="block px-4 py-2 text-sm text-zinc-300 hover:text-white hover:bg-zinc-900 transition-colors"
     >
-      VSL
+      Entrenamiento Gratuito
     </a>
   </div>
 </div>
