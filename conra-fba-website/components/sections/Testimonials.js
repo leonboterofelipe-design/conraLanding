@@ -52,12 +52,6 @@ const testimoniosData = [
     title: "Caso de éxito verificado en la comunidad",
   },
   {
-    id: 7,
-    type: "image",
-    mediaUrl: "https://assets.cdn.filesafe.space/SG0TKpTDkPoBscNii52K/media/6a0df80507a34aa07f808352.jpeg",
-    title: "Mensaje de bienvenida CONRA FBA",
-  },
-  {
     id: 8,
     type: "image",
     mediaUrl: "https://assets.cdn.filesafe.space/SG0TKpTDkPoBscNii52K/media/6a178ff8c460f23b3af61ff9.jpg",
