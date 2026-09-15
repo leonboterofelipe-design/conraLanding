@@ -22,7 +22,7 @@ export default function AboutConrado() {
             Conoce a Conrado Loaldi
           </h2>
           <p className="text-gray-300 mb-4 text-lg">
-            Vendedor de Amazon desde 2020, empresario y fundador de CONRA FBA.
+            Vendedor de Amazon desde 2020, empresario y fundador de Amazon Direct Academy(ADA).
           </p>
           <p className="text-gray-400 mb-4">
             Su experiencia no viene de estudiar el modelo desde afuera. Viene de

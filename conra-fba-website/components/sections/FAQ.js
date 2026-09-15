@@ -5,8 +5,8 @@ import { ChevronDown } from 'lucide-react';
 export default function FAQ() {
   const faqs = [
     {
-      q: '¿Qué modelo de negocio enseña CONRA FBA?',
-      a: 'CONRA FBA enseña Amazon Wholesale. Aprendés a comprar productos existentes de marcas reconocidas a marcas, distribuidores y proveedores oficiales para posteriormente comercializarlos dentro de Amazon, sin necesidad de inventar un producto o fabricar en China.',
+      q: '¿Qué modelo de negocio enseña Amazon Direct Academy (ADA) FBA?',
+      a: 'Amazon Direct Academy (ADA) FBA enseña Amazon Wholesale. Aprendés a comprar productos existentes de marcas reconocidas a marcas, distribuidores y proveedores oficiales para posteriormente comercializarlos dentro de Amazon, sin necesidad de inventar un producto o fabricar en China.',
     },
     {
       q: '¿Tengo que crear mi propia marca o producto?',
@@ -18,7 +18,7 @@ export default function FAQ() {
     },
     {
       q: '¿Puedo entrar si nunca vendí en Amazon?',
-      a: 'Sí. CONRA FBA está diseñado para poder comenzar desde cero, guiándote paso a paso en todo el proceso de apertura y operación, sin requerir experiencia previa.',
+      a: 'Sí. Amazon Direct Academy (ADA) FBA está diseñado para poder comenzar desde cero, guiándote paso a paso en todo el proceso de apertura y operación, sin requerir experiencia previa.',
     },
     {
       q: '¿Cuánto dinero necesito para empezar?',

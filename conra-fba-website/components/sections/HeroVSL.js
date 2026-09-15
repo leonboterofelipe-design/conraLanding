@@ -9,7 +9,7 @@ export default function HeroVSL() {
       <div className="absolute inset-0 z-0 overflow-hidden block md:hidden">
         <Image
           src="/assets/images/bannerM.png"
-          alt="Banner CONRA FBA Movil"
+          alt="Banner Amazon Direct Academy (ADA) FBA Movil"
           fill
           priority
           className="object-cover object-center"
@@ -20,7 +20,7 @@ export default function HeroVSL() {
       <div className="absolute inset-0 z-0 overflow-hidden hidden md:block">
         <Image
           src="/assets/banner.jpg"
-          alt="Banner CONRA FBA Desktop"
+          alt="Banner Amazon Direct Academy (ADA) FBA Desktop"
           fill
           priority
           className="object-cover object-center"
@@ -45,7 +45,7 @@ export default function HeroVSL() {
 
         <div className="flex flex-col sm:flex-row justify-center gap-3 pt-2">
           <a
-            href="https://go.conrafba.com/calendario"
+            href="https://go.Amazon Direct Academy (ADA)fba.com/calendario"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-[#FF8D0F] text-zinc-950 font-extrabold py-3.5 px-7 rounded-xl hover:bg-[#e07b0d] transition-all text-center shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 text-sm sm:text-base"
@@ -53,7 +53,7 @@ export default function HeroVSL() {
             AGENDA UNA LLAMADA
           </a>
           <a
-            href="https://go.conrafba.com"
+            href="https://go.Amazon Direct Academy (ADA)fba.com"
             target="_blank"
             rel="noopener noreferrer"
             className="border-2 border-[#FF8D0F] text-[#FF8D0F] font-extrabold py-3.5 px-7 rounded-xl hover:bg-[#FF8D0F] hover:text-zinc-950 transition-all text-center text-sm sm:text-base"

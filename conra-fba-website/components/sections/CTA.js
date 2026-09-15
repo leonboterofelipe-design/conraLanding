@@ -12,7 +12,7 @@ export default function CTA() {
       id: 0,
       label: "Es mi primera vez vendiendo en Amazon",
       title: "Construye tu primer negocio de Amazon Wholesale desde cero",
-      description: "CONRA FBA está diseñado para que puedas comenzar sin experiencia previa. Te guiamos paso a paso con acompañamiento 1:1 durante 12 semanas para que aprendas a tomar decisiones de negocio seguras."
+      description: "Amazon Direct Academy (ADA) FBA está diseñado para que puedas comenzar sin experiencia previa. Te guiamos paso a paso con acompañamiento 1:1 durante 12 semanas para que aprendas a tomar decisiones de negocio seguras."
     },
     {
       id: 1,
@@ -38,22 +38,22 @@ export default function CTA() {
 
       <div className="max-w-4xl mx-auto space-y-12 relative z-10">
         
-        {/* Banner Superior Estilo Amazon adaptado a CONRA FBA */}
+        {/* Banner Superior Estilo Amazon adaptado a Amazon Direct Academy (ADA) FBA */}
         <div className="bg-white border border-slate-200/80 rounded-2xl p-6 sm:p-8 shadow-sm border-l-4 border-l-[#FF8D0F] relative overflow-hidden">
           <div className="max-w-2xl space-y-2">
             <span className="text-[11px] font-mono font-bold tracking-widest text-[#FF8D0F] uppercase">
-              Mentoría Oficial CONRA FBA
+              Mentoría Oficial Amazon Direct Academy (ADA) FBA
             </span>
             <h3 className="text-base sm:text-lg font-bold text-slate-900 tracking-tight">
               ¿Listo para construir un negocio real de Amazon Wholesale acompañado por expertos?
             </h3>
             <p className="text-sm text-slate-600 leading-relaxed">
-              Conocé cómo funciona CONRA FBA y descubrí si el programa tiene sentido para vos agendando una llamada directa con nuestro equipo.
+              Conocé cómo funciona Amazon Direct Academy (ADA) FBA y descubrí si el programa tiene sentido para vos agendando una llamada directa con nuestro equipo.
             </p>
           </div>
           <div className="mt-4 pt-4 border-t border-slate-100 flex items-center">
             <a 
-              href="https://go.conrafba.com/calendario"
+              href="https://go.Amazon Direct Academy (ADA)fba.com/calendario"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-[#FF8D0F] hover:text-orange-600 transition-colors group"
@@ -64,7 +64,7 @@ export default function CTA() {
           </div>
         </div>
 
-        {/* Selector Interactivo (Pills / Radio con identidad propia de CONRA FBA) */}
+        {/* Selector Interactivo (Pills / Radio con identidad propia de Amazon Direct Academy (ADA) FBA) */}
         <div className="space-y-4 text-center">
           <p className="text-xs sm:text-sm font-semibold text-slate-500 uppercase tracking-widest">
             Elige la opción que mejor se adapte a tu momento actual:
@@ -97,7 +97,7 @@ export default function CTA() {
           
           <div className="space-y-3">
             <span className="inline-block text-[11px] font-mono font-bold tracking-widest text-[#FF8D0F] uppercase bg-orange-50 px-3 py-1 rounded-full border border-orange-100">
-              CONRA FBA — Wholesale & Mentoría 1:1
+              Amazon Direct Academy (ADA) FBA — Wholesale & Mentoría 1:1
             </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight leading-snug">
               {currentContent.title}
@@ -109,7 +109,7 @@ export default function CTA() {
 
           <div className="pt-4 border-t border-slate-100 space-y-4">
             <a
-              href="https://go.conrafba.com/calendario"
+              href="https://go.Amazon Direct Academy (ADA)fba.com/calendario"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 w-full sm:w-auto bg-[#FF8D0F] hover:bg-[#e07b0d] text-slate-950 font-extrabold px-10 py-4 rounded-2xl transition-all duration-300 shadow-lg shadow-orange-500/20 hover:shadow-orange-500/30 hover:-translate-y-0.5 text-sm sm:text-base"

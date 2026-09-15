@@ -43,7 +43,7 @@ export default function ProgramDetails() {
             El Sistema CONRA FBA
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-zinc-900 tracking-tight">
-            Por qué <span className="text-[#FF8D0F]">CONRA FBA</span> es diferente a todo lo demás.
+            Por qué <span className="text-[#FF8D0F]">ADA</span> es diferente a todo lo demás.
           </h2>
           <p className="text-base sm:text-lg text-zinc-600 leading-relaxed font-normal">
             Construye y opera un negocio real de Amazon Wholesale con un método estructurado, basado en números y respaldado por mentoría personalizada.

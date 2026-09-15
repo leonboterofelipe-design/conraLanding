@@ -128,7 +128,7 @@ export default function TestimoniosGrid() {
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-zinc-900 pb-6">
           <div>
             <span className="text-xs font-semibold tracking-widest text-[#FF8D0F] uppercase block mb-1">
-              Muro de Resultados — CONRA FBA
+              Muro de Resultados — Amazon Direct Academy (ADA)
             </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white">
               Lo que pasa cuando aplicas un sistema
