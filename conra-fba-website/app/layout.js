@@ -22,7 +22,7 @@ export const metadata = {
     siteName: 'Conra FBA',
     images: [
       {
-        url: '/og-image.jpg',
+        url: '/favicon.png',
         width: 1200,
         height: 630,
       },
