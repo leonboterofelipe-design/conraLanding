@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Conra FBA favicon">
+  <rect width="64" height="64" fill="#050505"/>
+  <g fill="none" fill-rule="evenodd">
+    <path d="M11 54L22 10h6l11 44h-7l-1.8-8H19.8L18 54H11zm11.5-16h6.5l-2.9-13h-.7l-2.9 13z" fill="#F4F4F5"/>
+    <path d="M33 10h7l12 44h-8l-1.9-7H35.9L34 54h-7L33 10zm6.2 10.7l-2.7 11.5h5.7l-2.1-11.5h-.9z" fill="#FF8A1F"/>
+  </g>
+</svg>

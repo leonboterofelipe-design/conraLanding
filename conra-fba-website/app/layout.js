@@ -7,12 +7,12 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
   title: 'Conra FBA | Amazon Wholesale con Conrado Loaldi',
-  description: 'Mentoría de 12 semanas para vender en Amazon Wholesale. Aprende a construir un negocio real en Amazon, paso a paso con Conrado Loaldi.',
+  description: 'Mentoría especializada en Amazon Wholesale sin intermediarios. Desarrollado por Loaldi Consulting Group LLC',
   keywords: 'Amazon Wholesale, FBA, mentoría, Conrado Loaldi, negocio online',
   authors: [{ name: 'Conra FBA' }],
   openGraph: {
     title: 'Conra FBA | Amazon Wholesale con Conrado Loaldi',
-    description: 'Mentoría de 12 semanas para vender en Amazon Wholesale.',
+    description: 'Mentoría especializada en Amazon Wholesale sin intermediarios. Desarrollado por Loaldi Consulting Group LLC',
     url: 'https://conrafba.com',
     siteName: 'Conra FBA',
     images: [
