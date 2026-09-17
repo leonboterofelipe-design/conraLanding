@@ -46,19 +46,19 @@ export default function Navbar() {
               
               <div className="absolute left-0 top-full w-48 bg-zinc-950 border border-zinc-800 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 py-2">
                 <Link
-                  href="/conraFBA/quien-soy"
+                  href="/conra-fba/quien-soy"
                   className="block px-4 py-2 text-sm text-zinc-300 hover:text-white hover:bg-zinc-900 transition-colors"
                 >
                   Quién soy
                 </Link>
                 <Link
-                  href="/conraFBA/historia"
+                  href="/conra-fba/historia"
                   className="block px-4 py-2 text-sm text-zinc-300 hover:text-white hover:bg-zinc-900 transition-colors"
                 >
                   Historia
                 </Link>
                 <Link
-                  href="/conraFBA/logros"
+                  href="/conra-fba/logros"
                   className="block px-4 py-2 text-sm text-zinc-300 hover:text-white hover:bg-zinc-900 transition-colors"
                 >
                   Logros
@@ -161,21 +161,21 @@ export default function Navbar() {
             {mobileConraOpen && (
               <div className="pl-4 space-y-2 mt-1 border-l border-zinc-800">
                 <Link
-                  href="/conraFBA/quien-soy"
+                  href="/conra-fba/quien-soy"
                   onClick={() => setIsOpen(false)}
                   className="block text-sm text-zinc-400 hover:text-white py-1"
                 >
                   Quién soy
                 </Link>
                 <Link
-                  href="/conraFBA/historia"
+                  href="/conra-fba/historia"
                   onClick={() => setIsOpen(false)}
                   className="block text-sm text-zinc-400 hover:text-white py-1"
                 >
                   Historia
                 </Link>
                 <Link
-                  href="/conraFBA/logros"
+                  href="/conra-fba/logros"
                   onClick={() => setIsOpen(false)}
                   className="block text-sm text-zinc-400 hover:text-white py-1"
                 >
