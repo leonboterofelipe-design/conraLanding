@@ -99,24 +99,45 @@ export default function Footer() {
       </div>
           
       {/* Aviso legal corporativo obligatorio */}
-      <div className="max-w-7xl mx-auto border-t border-gray-800 pt-6 text-gray-500 space-y-3">
+      <div className="max-w-7xl mx-auto border-t border-gray-800 pt-6 text-gray-500 text-sm space-y-4">
         <p>
-          Esta página web es operada y mantenida por{' '}
-          <strong>DIGITAL BUSINESS COL</strong>. El uso del sitio web se
-          rige por sus Términos de Servicio y Política de Privacidad. Loaldi Consulting Group LLC
-          es una empresa de educación y capacitación en ventas y marketing. No vendemos una oportunidad de negocio, ni
-          programas para &ldquo;hacerse rico rápido&rdquo; o un sistema para ganar dinero.
+          Esta página web es operada y mantenida por <strong>LOALDI CONSULTING GROUP LLC</strong>. 
+          El uso del sitio web se rige por sus Términos de Servicio y Política de Privacidad. 
+          LOALDI CONSULTING GROUP LLC es una empresa de educación y capacitación en ventas y marketing. 
+          No vendemos una oportunidad de negocio, ni programas para &ldquo;hacerse rico rápido&rdquo; o un 
+          sistema para ganar dinero. Creemos que, con educación, las personas pueden estar mejor preparadas 
+          para tomar decisiones de inversión, pero no garantizamos el éxito en nuestra capacitación. No hacemos 
+          afirmaciones sobre ganancias, esfuerzos o afirmaciones de que nuestra capacitación le hará ganar dinero. 
+          Todo el material es propiedad intelectual y está protegido por derechos de autor. Cualquier duplicación, 
+          reproducción o distribución está estrictamente prohibida. Consulte nuestra Divulgación completa para 
+          obtener detalles importantes.
         </p>
+        
         <p>
-          Los resultados varían, no son típicos y dependen del esfuerzo, el
-          tiempo y la habilidad individuales. Este sitio NO está respaldado por
-          Facebook de ninguna manera. FACEBOOK es una marca registrada de
-          FACEBOOK, Inc.
+          Las declaraciones y representaciones son opiniones, hallazgos o experiencias de personas que 
+          generalmente han comprado educación y capacitación. Los resultados varían, no son típicos y dependen 
+          del esfuerzo, el tiempo y la habilidad individuales, así como de condiciones desconocidas y otros factores. 
+          No medimos ganancias ni rendimiento financiero. En cambio, rastreamos transacciones completadas y 
+          satisfacción de los servicios mediante encuestas voluntarias. Los resultados muestran que la mayoría 
+          de los clientes de Capacitación Avanzada que aplican la capacitación. Sin embargo, no debe equiparar las 
+          transacciones de cierre de ventas completadas con transacciones exitosas. Además, muchos clientes no 
+          continúan con el programa, no aplican lo que aprenden o intentan aplicar lo que aprenden pero aún así 
+          tienen dificultades para lograr que las ventas sean exitosas para ellos.
+        </p>
+
+        <p>
+          Usamos cookies para ayudar a mejorar, promover y proteger nuestros servicios. Al continuar usando este 
+          sitio, acepta nuestra política de privacidad, aviso legal y términos de uso.
+        </p>
+
+        <p>
+          Este sitio no es parte del sitio web de Facebook ni de Facebook, Inc. Este sitio NO está respaldado por 
+          Facebook de ninguna manera. FACEBOOK es una marca registrada de FACEBOOK, Inc. <strong>Aviso Legal Agencias.</strong>
         </p>
       </div>
 
-      <div className="max-w-7xl mx-auto pt-6 border-t border-gray-800/50 text-center md:text-left flex flex-col md:flex-row justify-between items-center text-gray-400">
-        <p>&copy; {currentYear} Loaldi Consulting Group LLC - DIGITAL BUSINESS COL - Todos los derechos reservados.</p>
+      <div className="max-w-7xl mx-auto pt-6 border-t border-gray-800/50 text-center md:text-left flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm">
+        <p>&copy; {currentYear} Loaldi Consulting Group LLC - Todos los derechos reservados.</p>
       </div>
       
       {/*

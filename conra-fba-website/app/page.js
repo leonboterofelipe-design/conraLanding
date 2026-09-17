@@ -5,7 +5,7 @@ import AboutConrado from '@/components/sections/AboutConrado';
 import Testimonials from '@/components/sections/Testimonials';
 import FAQ from '@/components/sections/FAQ';
 import CTA from '@/components/sections/CTA';
-import QuienSoyPage from './conra-fba/quien-soy/page';
+import PorQueLoHagoPage from '@/components/sections/poruqeLoHago';
 
 export default function Page() {
   return (
@@ -13,6 +13,7 @@ export default function Page() {
       <HeroVSL />
       <ProgramDetails />
       <AboutConrado />
+      <PorQueLoHagoPage />
       <Testimonials />
       <FAQ />
       <CTA />

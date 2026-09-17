@@ -12,7 +12,7 @@ export default function CTA() {
       id: 0,
       label: "Es mi primera vez vendiendo en Amazon",
       title: "Construye tu primer negocio de Amazon Wholesale desde cero",
-      description: "Amazon Direct Academy (ADA) FBA está diseñado para que puedas comenzar sin experiencia previa. Te guiamos paso a paso con acompañamiento 1:1 durante 12 semanas para que aprendas a tomar decisiones de negocio seguras."
+      description: "Amazon Direct Academy (ADA) FBA está diseñado para que puedas comenzar sin experiencia previa. Te guiamos paso a paso con acompañamiento 1:1 para que aprendas a tomar decisiones de negocio seguras."
     },
     {
       id: 1,
@@ -109,7 +109,7 @@ export default function CTA() {
 
           <div className="pt-4 border-t border-slate-100 space-y-4">
             <a
-              href="https://go.Amazon Direct Academy (ADA)fba.com/calendario"
+              href="https://go.conrafba.com/calendario"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 w-full sm:w-auto bg-[#FF8D0F] hover:bg-[#e07b0d] text-slate-950 font-extrabold px-10 py-4 rounded-2xl transition-all duration-300 shadow-lg shadow-orange-500/20 hover:shadow-orange-500/30 hover:-translate-y-0.5 text-sm sm:text-base"
