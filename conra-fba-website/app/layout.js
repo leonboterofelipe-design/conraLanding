@@ -10,6 +10,11 @@ export const metadata = {
   description: 'Mentoría especializada en Amazon Wholesale sin intermediarios. Desarrollado por Loaldi Consulting Group LLC',
   keywords: 'Amazon Wholesale, FBA, mentoría, Conrado Loaldi, negocio online',
   authors: [{ name: 'Conra FBA' }],
+  icons: {
+    icon: '/icon.svg',
+    shortcut: '/icon.svg',
+    apple: '/icon.svg',
+  },
   openGraph: {
     title: 'Conra FBA | Amazon Wholesale con Conrado Loaldi',
     description: 'Mentoría especializada en Amazon Wholesale sin intermediarios. Desarrollado por Loaldi Consulting Group LLC',
