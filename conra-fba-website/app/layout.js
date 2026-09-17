@@ -11,9 +11,9 @@ export const metadata = {
   keywords: 'Amazon Wholesale, FBA, mentoría, Conrado Loaldi, negocio online',
   authors: [{ name: 'Conra FBA' }],
   icons: {
-    icon: '/icon.svg',
-    shortcut: '/icon.svg',
-    apple: '/icon.svg',
+    icon: 'favicon.png',
+    shortcut: '/favicon.png',
+    apple: '/favicon.png',
   },
   openGraph: {
     title: 'Conra FBA | Amazon Wholesale con Conrado Loaldi',
