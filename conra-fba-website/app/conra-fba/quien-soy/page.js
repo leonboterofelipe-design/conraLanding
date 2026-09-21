@@ -75,7 +75,7 @@ export default function QuienSoyPage() {
           </p>
         </div>
 
-        {/* Llamado a la Acción (CTA) */}
+        {/* Llamado a la Acción i(CTA) */}
         <div className="text-center bg-gradient-to-r from-zinc-950 via-zinc-900 to-zinc-950 border border-zinc-800 p-10 rounded-2xl space-y-6">
           <h3 className="text-3xl font-bold text-white">¿Listo para construir tu negocio real?</h3>
           <div className="pt-2 flex flex-col sm:flex-row justify-center gap-4">
