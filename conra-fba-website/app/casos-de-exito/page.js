@@ -16,10 +16,10 @@ export default function ConstruccionPage() {
         </p>
         <div>
           <Link
-            href="/"
+            href="/resultados"
             className="inline-block bg-[#FF8D0F] text-black font-bold py-3 px-6 rounded-md hover:opacity-90 transition-opacity"
           >
-            Volver al inicio
+            Volver a resultados
           </Link>
         </div>
       </div>

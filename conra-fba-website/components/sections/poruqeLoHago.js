@@ -99,7 +99,7 @@ export default function PorQueLoHagoPage() {
               <span className="text-[#FF8D0F] text-xs font-bold uppercase tracking-[0.2em]">Testimonios</span>
               <h3 className="mt-2 text-2xl md:text-3xl font-black text-zinc-950">Estudiantes que encontraron dirección real</h3>
             </div>
-            <Link href="/casos-de-exito" className="hidden sm:inline-flex items-center text-sm font-bold text-zinc-900 hover:text-[#FF8D0F] transition-colors">
+            <Link href="/resultados" className="hidden sm:inline-flex items-center text-sm font-bold text-zinc-900 hover:text-[#FF8D0F] transition-colors">
               Ver más casos de éxito →
             </Link>
           </div>
