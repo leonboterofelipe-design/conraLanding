@@ -124,10 +124,10 @@ export default function Navbar() {
               </div>
             </div>
 
-            {/* Menu 5: Resultados (Desktop) */}
+            {/* Menu 5: Testimonios (Desktop) */}
             <div className="relative group">
               <button className="flex items-center gap-1 text-zinc-300 hover:text-white font-medium transition-colors py-2 focus:outline-none">
-                Resultados
+                Testimonios
                 <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
               </button>
               
@@ -136,7 +136,7 @@ export default function Navbar() {
                   href="/resultados"
                   className="block px-4 py-2 text-sm text-zinc-300 hover:text-white hover:bg-zinc-900 transition-colors"
                 >
-                  Ver Resultados
+                  Ver Testimonios
                 </Link>
               </div>
             </div>
@@ -276,13 +276,13 @@ export default function Navbar() {
             )}
           </div>
 
-          {/* Mobile Menu: Resultados */}
+          {/* Mobile Menu: Testimonios */}
           <div>
             <button
               onClick={() => setMobileResultadosOpen(!mobileResultadosOpen)}
               className="flex items-center justify-between w-full text-zinc-300 py-2 font-medium"
             >
-              Resultados
+              Testimonios
               <ChevronDown className={`w-4 h-4 transition-transform ${mobileResultadosOpen ? 'rotate-180' : ''}`} />
             </button>
             {mobileResultadosOpen && (
@@ -292,7 +292,7 @@ export default function Navbar() {
                   onClick={() => setIsOpen(false)}
                   className="block text-sm text-zinc-400 hover:text-white py-1"
                 >
-                  Ver Resultados
+                  Ver Testimonios
                 </Link>
               </div>
             )}

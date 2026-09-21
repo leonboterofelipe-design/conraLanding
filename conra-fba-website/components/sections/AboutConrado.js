@@ -8,7 +8,7 @@ export default function AboutConrado() {
         <div className="w-full md:w-1/2">
           <div className="aspect-square bg-gray-800 rounded-lg overflow-hidden relative">
             <Image
-              src="/assets/images/DSC01098.JPG"
+              src="/assets/DSC01035.JPG"
               alt="Conrado Loaldi - CEO & Founder de Conra FBA"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
