@@ -12,6 +12,7 @@ export default function Navbar() {
   const [mobileAdaOpen, setMobileAdaOpen] = useState(false);
   const [mobileAprendeOpen, setMobileAprendeOpen] = useState(false);
   const [mobileEstrategiaOpen, setMobileEstrategiaOpen] = useState(false);
+  const [mobileResultadosOpen, setMobileResultadosOpen] = useState(false);
 
   return (
     <nav className="fixed top-0 left-0 w-full bg-black/95 backdrop-blur-sm z-50 border-b border-zinc-800 shadow-sm">
@@ -24,13 +25,9 @@ export default function Navbar() {
                 src="/assets/images/logo1.jpg"
                 alt="CONRA FBA Logo"
                 width={220}
-
-              height={124}
+                height={124}
                 className="h-20 w-auto object-contain border-t-[15px] border-b-[5px] border-black"
                 priority
-
-
-                
               />
             </Link>
           </div>
@@ -89,8 +86,7 @@ export default function Navbar() {
               </div>
             </div>
 
-
-             {/* Menu 3: Aprende aquí */}
+            {/* Menu 3: Aprende aquí */}
             <div className="relative group">
               <button className="flex items-center gap-1 text-zinc-300 hover:text-white font-medium transition-colors py-2 focus:outline-none">
                 Aprende aquí
@@ -109,24 +105,41 @@ export default function Navbar() {
               </div>
             </div>
 
-          {/* Menu 4: Estrategia $10k */}
-<div className="relative group">
-  <button className="flex items-center gap-1 text-zinc-300 hover:text-white font-medium transition-colors py-2 focus:outline-none">
-    Estrategia $10k
-    <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
-  </button>
-  
-  <div className="absolute left-0 top-full w-52 bg-zinc-950 border border-zinc-800 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 py-2 z-50">
-    <a
-      href="https://go.conrafba.com"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="block px-4 py-2 text-sm text-zinc-300 hover:text-white hover:bg-zinc-900 transition-colors"
-    >
-      Entrenamiento Gratuito
-    </a>
-  </div>
-</div>
+            {/* Menu 4: Estrategia $10k */}
+            <div className="relative group">
+              <button className="flex items-center gap-1 text-zinc-300 hover:text-white font-medium transition-colors py-2 focus:outline-none">
+                Estrategia $10k
+                <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
+              </button>
+              
+              <div className="absolute left-0 top-full w-52 bg-zinc-950 border border-zinc-800 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 py-2 z-50">
+                <a
+                  href="https://go.conrafba.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block px-4 py-2 text-sm text-zinc-300 hover:text-white hover:bg-zinc-900 transition-colors"
+                >
+                  Entrenamiento Gratuito
+                </a>
+              </div>
+            </div>
+
+            {/* Menu 5: Resultados (Desktop) */}
+            <div className="relative group">
+              <button className="flex items-center gap-1 text-zinc-300 hover:text-white font-medium transition-colors py-2 focus:outline-none">
+                Resultados
+                <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
+              </button>
+              
+              <div className="absolute left-0 top-full w-52 bg-zinc-950 border border-zinc-800 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 py-2 z-50">
+                <Link
+                  href="/resultados"
+                  className="block px-4 py-2 text-sm text-zinc-300 hover:text-white hover:bg-zinc-900 transition-colors"
+                >
+                  Ver Resultados
+                </Link>
+              </div>
+            </div>
 
             {/* Action Call */}
             <a href="https://go.conrafba.com/calendario" target="_blank" rel="noopener noreferrer">
@@ -150,6 +163,7 @@ export default function Navbar() {
       {/* Mobile Accordion Drawer Navigation */}
       {isOpen && (
         <div className="md:hidden bg-zinc-950 border-b border-zinc-800 px-4 pt-2 pb-6 space-y-3">
+          {/* Mobile Menu: ConraFBA */}
           <div>
             <button
               onClick={() => setMobileConraOpen(!mobileConraOpen)}
@@ -185,6 +199,7 @@ export default function Navbar() {
             )}
           </div>
 
+          {/* Mobile Menu: ADA */}
           <div>
             <button
               onClick={() => setMobileAdaOpen(!mobileAdaOpen)}
@@ -213,6 +228,7 @@ export default function Navbar() {
             )}
           </div>
 
+          {/* Mobile Menu: Aprende aquí */}
           <div>
             <button
               onClick={() => setMobileAprendeOpen(!mobileAprendeOpen)}
@@ -236,6 +252,7 @@ export default function Navbar() {
             )}
           </div>
 
+          {/* Mobile Menu: Estrategia $10k */}
           <div>
             <button
               onClick={() => setMobileEstrategiaOpen(!mobileEstrategiaOpen)}
@@ -259,6 +276,29 @@ export default function Navbar() {
             )}
           </div>
 
+          {/* Mobile Menu: Resultados */}
+          <div>
+            <button
+              onClick={() => setMobileResultadosOpen(!mobileResultadosOpen)}
+              className="flex items-center justify-between w-full text-zinc-300 py-2 font-medium"
+            >
+              Resultados
+              <ChevronDown className={`w-4 h-4 transition-transform ${mobileResultadosOpen ? 'rotate-180' : ''}`} />
+            </button>
+            {mobileResultadosOpen && (
+              <div className="pl-4 space-y-2 mt-1 border-l border-zinc-800">
+                <Link
+                  href="/resultados"
+                  onClick={() => setIsOpen(false)}
+                  className="block text-sm text-zinc-400 hover:text-white py-1"
+                >
+                  Ver Resultados
+                </Link>
+              </div>
+            )}
+          </div>
+
+          {/* Mobile Action Call */}
           <div className="pt-2">
             <a href="https://go.conrafba.com/calendario" target="_blank" rel="noopener noreferrer" className="block w-full text-center">
               <Button size="sm" className="w-full">Agendar Llamada</Button>
