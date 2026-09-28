@@ -9,24 +9,25 @@ import { Play, X } from 'lucide-react';
 
 const testimoniosData = [
   // ORDEN CARPETA DRIVE "VIDEOS EN ORDEN DE $$$" (01 → 18)
-  { id: 'orden-01', driveId: '1Q06WB-tebivpJdZ_lhXGzxMbpJl2sJyy', title: 'Onell - 26K facturados', badge: 'RESULTADOS', category: 'clip', name: 'Onell', stat: '$26K' },
-  { id: 'orden-02', driveId: '1JBClsWbmxt6g51LL2xqOGX1e_NdbhIag', title: 'Podio Clip 5', badge: 'RESULTADOS', category: 'podio', name: 'Estudiante', stat: null },
-  { id: 'orden-03', driveId: '1UC4zR1LzzDrLVoJ1w8SiaP4gsnQ3mUvZ', title: 'Elizabeth - Resultados crudos', badge: 'RESULTADOS', category: 'clip', name: 'Elizabeth', stat: null },
-  { id: 'orden-04', driveId: '1I1ucC_Bdske2wM2tL2QN3LLVp6gmsLNk', title: 'Onell - 5K en un día', badge: 'RESULTADOS', category: 'clip', name: 'Onell', stat: '$5K' },
-  { id: 'orden-05', driveId: '1Za4kUY0qyJa8DgclfBtL4Xqbf0_5vDix', title: 'Felipe - Clip 1', badge: 'TESTIMONIO', category: 'clip', name: 'Felipe', stat: null },
+  // ORDENADO SEGÚN LOS LINKS PROPORCIONADOS (1 → 18)
+  { id: 'orden-01', driveId: '16H8fL7zfRcejaxC5-_GxkWtfPTjN2hue', title: 'Podio Clip 4', badge: 'RESULTADOS', category: 'podio', name: 'Estudiante', stat: null },
+  { id: 'orden-02', driveId: '16wS0wgXoaZq2g1WRIc-6D3QHoENfNwb1', title: 'Lilian - Clip 2', badge: 'ESTUDIANTE', category: 'clip', name: 'Lilian', stat: null },
+  { id: 'orden-03', driveId: '181GxdE8hD9Zq90e22cC5VhwdEtLcfMEx', title: 'Review sin filtros 4', badge: 'TESTIMONIO', category: 'review', name: 'Estudiante', stat: null },
+  { id: 'orden-04', driveId: '19OR8b43P6V31dJms1ElFlB9U7WTpiLm3', title: 'Azucena - Testimonio', badge: 'ESTUDIANTE', category: 'clip', name: 'Azucena', stat: null },
+  { id: 'orden-05', driveId: '1I1ucC_Bdske2wM2tL2QN3LLVp6gmsLNk', title: 'Onell - 5K en un día', badge: 'RESULTADOS', category: 'clip', name: 'Onell', stat: '$5K' },
   { id: 'orden-06', driveId: '1IhD6-97-qbXhKcI2op5xNMez87BvwfM6', title: 'Lilian - Clip 1', badge: 'ESTUDIANTE', category: 'clip', name: 'Lilian', stat: null },
-  { id: 'orden-07', driveId: '1qD7oIuR03R7-lWmA4uy8bTQKAfbjUh9a', title: 'Podio Clip 6', badge: 'RESULTADOS', category: 'podio', name: 'Estudiante', stat: null },
-  { id: 'orden-08', driveId: '1VJ5jKjGDCsX_5AyUY8GpQuVc-q7cVKOV', title: 'Felipe - Clip 2', badge: 'TESTIMONIO', category: 'clip', name: 'Felipe', stat: null },
-  { id: 'orden-09', driveId: '16wS0wgXoaZq2g1WRIc-6D3QHoENfNwb1', title: 'Lilian - Clip 2', badge: 'ESTUDIANTE', category: 'clip', name: 'Lilian', stat: null },
-  { id: 'orden-10', driveId: '1cLFp252_sgOwPqW6ikrHod3BplA3hQ7W', title: 'Onell - Review sin filtros', badge: 'TESTIMONIO', category: 'clip', name: 'Onell', stat: null },
-  { id: 'orden-11', driveId: '16H8fL7zfRcejaxC5-_GxkWtfPTjN2hue', title: 'Podio Clip 4', badge: 'RESULTADOS', category: 'podio', name: 'Estudiante', stat: null },
-  { id: 'orden-12', driveId: '1mW-yQF3AH-SO6PaRqDwRcMx9LlgB3Fuc', title: 'Review sin filtros 2', badge: 'TESTIMONIO', category: 'review', name: 'Estudiante', stat: null },
-  { id: 'orden-13', driveId: '1VnevTKEXidODA7qydVLl8ZrOeIfjv9bT', title: 'Podio Clip 8', badge: 'RESULTADOS', category: 'podio', name: 'Estudiante', stat: null },
-  { id: 'orden-14', driveId: '181GxdE8hD9Zq90e22cC5VhwdEtLcfMEx', title: 'Review sin filtros 4', badge: 'TESTIMONIO', category: 'review', name: 'Estudiante', stat: null },
-  { id: 'orden-15', driveId: '1ZuYl1P60uotfoaJbhdcfNYqiIjle4ogQ', title: 'Podio Clip 9', badge: 'RESULTADOS', category: 'podio', name: 'Estudiante', stat: null },
-  { id: 'orden-16', driveId: '1sBSLVwwN1Sd5mY0FIPuBHsEhD2-6JRfd', title: 'Review sin filtros 5', badge: 'TESTIMONIO', category: 'review', name: 'Estudiante', stat: null },
-  { id: 'orden-17', driveId: '1TfR3gbQiSe9x7Jpk5pXdAsiSXkz6I4av', title: 'Camilo - Dos marcas y 7 productos', badge: 'RESULTADOS', category: 'clip', name: 'Camilo', stat: '7 SKUs' },
-  { id: 'orden-18', driveId: '19OR8b43P6V31dJms1ElFlB9U7WTpiLm3', title: 'Azucena - Testimonio', badge: 'ESTUDIANTE', category: 'clip', name: 'Azucena', stat: null },
+  { id: 'orden-07', driveId: '1JBClsWbmxt6g51LL2xqOGX1e_NdbhIag', title: 'Podio Clip 5', badge: 'RESULTADOS', category: 'podio', name: 'Estudiante', stat: null },
+  { id: 'orden-08', driveId: '1Q06WB-tebivpJdZ_lhXGzxMbpJl2sJyy', title: 'Onell - 26K facturados', badge: 'RESULTADOS', category: 'clip', name: 'Onell', stat: '$26K' },
+  { id: 'orden-09', driveId: '1TfR3gbQiSe9x7Jpk5pXdAsiSXkz6I4av', title: 'Camilo - Dos marcas y 7 productos', badge: 'RESULTADOS', category: 'clip', name: 'Camilo', stat: '7 SKUs' },
+  { id: 'orden-10', driveId: '1UC4zR1LzzDrLVoJ1w8SiaP4gsnQ3mUvZ', title: 'Elizabeth - Resultados crudos', badge: 'RESULTADOS', category: 'clip', name: 'Elizabeth', stat: null },
+  { id: 'orden-11', driveId: '1VJ5jKjGDCsX_5AyUY8GpQuVc-q7cVKOV', title: 'Felipe - Clip 2', badge: 'TESTIMONIO', category: 'clip', name: 'Felipe', stat: null },
+  { id: 'orden-12', driveId: '1VnevTKEXidODA7qydVLl8ZrOeIfjv9bT', title: 'Podio Clip 8', badge: 'RESULTADOS', category: 'podio', name: 'Estudiante', stat: null },
+  { id: 'orden-13', driveId: '1Za4kUY0qyJa8DgclfBtL4Xqbf0_5vDix', title: 'Felipe - Clip 1', badge: 'TESTIMONIO', category: 'clip', name: 'Felipe', stat: null },
+  { id: 'orden-14', driveId: '1ZuYl1P60uotfoaJbhdcfNYqiIjle4ogQ', title: 'Podio Clip 9', badge: 'RESULTADOS', category: 'podio', name: 'Estudiante', stat: null },
+  { id: 'orden-15', driveId: '1cLFp252_sgOwPqW6ikrHod3BplA3hQ7W', title: 'Onell - Review sin filtros', badge: 'TESTIMONIO', category: 'clip', name: 'Onell', stat: null },
+  { id: 'orden-16', driveId: '1mW-yQF3AH-SO6PaRqDwRcMx9LlgB3Fuc', title: 'Review sin filtros 2', badge: 'TESTIMONIO', category: 'review', name: 'Estudiante', stat: null },
+  { id: 'orden-17', driveId: '1qD7oIuR03R7-lWmA4uy8bTQKAfbjUh9a', title: 'Podio Clip 6', badge: 'RESULTADOS', category: 'podio', name: 'Estudiante', stat: null },
+  { id: 'orden-18', driveId: '1sBSLVwwN1Sd5mY0FIPuBHsEhD2-6JRfd', title: 'Review sin filtros 5', badge: 'TESTIMONIO', category: 'review', name: 'Estudiante', stat: null },
 
   // REVIEWS SIN FILTROS (5)
   { id: 'review-1', driveId: '1ZXqjPY0P_hzAkZGb8aoF-h5Zl3Qp-43w', title: 'Review sin filtros - Estudiante 1', badge: 'TESTIMONIO', category: 'review', name: 'Estudiante', stat: null },
@@ -114,7 +115,6 @@ export default function TestimoniosGrid() {
         </div>
 
         {/* ========== GRID TESTIMONIOS ========== */}
-        {/* CAMBIO AQUÍ: grid-cols-2 (por defecto/móvil) y gap-3 para móvil, gap-6 para desktop */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-6 auto-rows-max">
           {testimoniosData.map((item) => (
             <div
@@ -126,7 +126,6 @@ export default function TestimoniosGrid() {
               {/* VIDEO / THUMBNAIL CONTAINER */}
               <div className="relative w-full aspect-[9/16] bg-black overflow-hidden flex items-center justify-center">
                 
-                {/* Imagen de portada (thumbnail) */}
                 <img
                   src={getDriveThumbnail(item.driveId)}
                   alt={item.title}
@@ -137,17 +136,14 @@ export default function TestimoniosGrid() {
                   }}
                 />
 
-                {/* Overlay oscuro */}
                 <div className="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors duration-300" />
 
-                {/* Play Button - Adaptado el tamaño para móvil */}
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="w-10 h-10 md:w-16 md:h-16 rounded-full bg-[#FF8D0F] flex items-center justify-center shadow-xl text-black font-bold group-hover:scale-110 transition-transform duration-300">
                     <Play className="w-4 h-4 md:w-6 md:h-6 ml-0.5 md:ml-1" fill="currentColor" />
                   </div>
                 </div>
 
-                {/* Badge superior - Textos más pequeños en móvil */}
                 <div className="absolute top-2 left-2 right-2 md:top-3 md:left-3 md:right-3 flex flex-wrap justify-between items-start gap-1 md:gap-2">
                   <div className="bg-black/80 backdrop-blur-sm border border-[#FF8D0F]/40 px-2 py-1 md:px-3 md:py-1.5 rounded-md md:rounded-lg">
                     <span className="text-[8px] md:text-xs uppercase font-bold text-[#FF8D0F] tracking-wide block">
@@ -182,7 +178,6 @@ export default function TestimoniosGrid() {
           <div className="fixed inset-0 z-50 bg-black/95 backdrop-blur-sm flex items-center justify-center p-4">
             <div className="relative w-full max-w-4xl bg-black rounded-2xl border border-zinc-800 overflow-hidden shadow-2xl">
               
-              {/* IFRAME GOOGLE DRIVE */}
               <div className="relative w-full aspect-video">
                 <iframe
                   src={getGoogleDriveEmbedUrl(
@@ -195,7 +190,6 @@ export default function TestimoniosGrid() {
                 />
               </div>
 
-              {/* Close button */}
               <button
                 onClick={handleClose}
                 className="absolute top-2 right-2 md:top-4 md:right-4 z-10 bg-black/80 hover:bg-[#FF8D0F] text-white rounded-full p-2 transition-colors"
@@ -203,7 +197,6 @@ export default function TestimoniosGrid() {
                 <X size={20} className="md:w-6 md:h-6" />
               </button>
 
-              {/* Info footer */}
               <div className="bg-black/50 backdrop-blur p-4 border-t border-zinc-800 hidden md:block">
                 <h3 className="text-lg font-bold text-white">
                   {testimoniosData.find((t) => t.id === expandedId)?.title}
