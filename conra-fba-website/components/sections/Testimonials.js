@@ -4,7 +4,33 @@ import React, { useState, useRef, useEffect } from 'react';
 import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 import Link from 'next/link';
 
+// Miniatura y embed de Google Drive
+const getDriveThumbnail = (driveId) =>
+  `https://drive.google.com/thumbnail?id=${driveId}&sz=w1000`;
+const getDriveEmbedUrl = (driveId) =>
+  `https://drive.google.com/file/d/${driveId}/preview`;
+
 const testimoniosData = [
+  // ORDEN CARPETA DRIVE "VIDEOS EN ORDEN DE $$$" (01 → 18)
+  { id: 'drive-01', type: 'drive', driveId: '1Q06WB-tebivpJdZ_lhXGzxMbpJl2sJyy', title: 'Onell - 26K facturados' },
+  { id: 'drive-02', type: 'drive', driveId: '1JBClsWbmxt6g51LL2xqOGX1e_NdbhIag', title: 'Podio Clip 5' },
+  { id: 'drive-03', type: 'drive', driveId: '1UC4zR1LzzDrLVoJ1w8SiaP4gsnQ3mUvZ', title: 'Elizabeth - Resultados crudos' },
+  { id: 'drive-04', type: 'drive', driveId: '1I1ucC_Bdske2wM2tL2QN3LLVp6gmsLNk', title: 'Onell - 5K en un día' },
+  { id: 'drive-05', type: 'drive', driveId: '1Za4kUY0qyJa8DgclfBtL4Xqbf0_5vDix', title: 'Felipe - Clip 1' },
+  { id: 'drive-06', type: 'drive', driveId: '1IhD6-97-qbXhKcI2op5xNMez87BvwfM6', title: 'Lilian - Clip 1' },
+  { id: 'drive-07', type: 'drive', driveId: '1qD7oIuR03R7-lWmA4uy8bTQKAfbjUh9a', title: 'Podio Clip 6' },
+  { id: 'drive-08', type: 'drive', driveId: '1VJ5jKjGDCsX_5AyUY8GpQuVc-q7cVKOV', title: 'Felipe - Clip 2' },
+  { id: 'drive-09', type: 'drive', driveId: '16wS0wgXoaZq2g1WRIc-6D3QHoENfNwb1', title: 'Lilian - Clip 2' },
+  { id: 'drive-10', type: 'drive', driveId: '1cLFp252_sgOwPqW6ikrHod3BplA3hQ7W', title: 'Onell - Review sin filtros' },
+  { id: 'drive-11', type: 'drive', driveId: '16H8fL7zfRcejaxC5-_GxkWtfPTjN2hue', title: 'Podio Clip 4' },
+  { id: 'drive-12', type: 'drive', driveId: '1mW-yQF3AH-SO6PaRqDwRcMx9LlgB3Fuc', title: 'Review sin filtros 2' },
+  { id: 'drive-13', type: 'drive', driveId: '1VnevTKEXidODA7qydVLl8ZrOeIfjv9bT', title: 'Podio Clip 8' },
+  { id: 'drive-14', type: 'drive', driveId: '181GxdE8hD9Zq90e22cC5VhwdEtLcfMEx', title: 'Review sin filtros 4' },
+  { id: 'drive-15', type: 'drive', driveId: '1ZuYl1P60uotfoaJbhdcfNYqiIjle4ogQ', title: 'Podio Clip 9' },
+  { id: 'drive-16', type: 'drive', driveId: '1sBSLVwwN1Sd5mY0FIPuBHsEhD2-6JRfd', title: 'Review sin filtros 5' },
+  { id: 'drive-17', type: 'drive', driveId: '1TfR3gbQiSe9x7Jpk5pXdAsiSXkz6I4av', title: 'Camilo - Dos marcas y 7 productos' },
+  { id: 'drive-18', type: 'drive', driveId: '19OR8b43P6V31dJms1ElFlB9U7WTpiLm3', title: 'Azucena - Testimonio' },
+
   {
     id: 1,
     type: "wistia",
@@ -94,6 +120,9 @@ export default function TestimoniosGrid() {
   const scrollRef = useRef(null);
 
   useEffect(() => {
+    // No auto-desplazar mientras hay un video reproduciéndose
+    if (playingId !== null) return;
+
     const interval = setInterval(() => {
       if (scrollRef.current) {
         const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
@@ -105,7 +134,7 @@ export default function TestimoniosGrid() {
       }
     }, 3000);
     return () => clearInterval(interval);
-  }, []);
+  }, [playingId]);
 
   const scrollManual = (direction) => {
     if (scrollRef.current) {
@@ -157,7 +186,7 @@ export default function TestimoniosGrid() {
           </div>
         </div>
 
-        {/* Carrusel con tarjetas más altas modificando el contenedor a h-72 o aspect-[4/3] */}
+        {/* Carrusel */}
         <div 
           ref={scrollRef}
           className="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-4 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
@@ -167,9 +196,40 @@ export default function TestimoniosGrid() {
               key={item.id}
               className="w-[320px] sm:w-[400px] lg:w-[calc(33.333%-16px)] shrink-0 flex flex-col group cursor-pointer snap-start"
             >
-              {/* Aquí cambiamos aspect-video por h-72 para hacerlas notablemente más altas */}
               <div className="relative w-full h-72 sm:h-80 bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800 group-hover:border-[#FF8D0F]/50 transition-all shadow-xl">
-                {item.type === "wistia" ? (
+                {item.type === "drive" ? (
+                  playingId === item.id ? (
+                    <div className="w-full h-full relative bg-black">
+                      <iframe
+                        src={getDriveEmbedUrl(item.driveId)}
+                        title={item.title}
+                        allow="autoplay; fullscreen"
+                        frameBorder="0"
+                        className="w-full h-full absolute inset-0"
+                      />
+                    </div>
+                  ) : (
+                    <div
+                      className="relative w-full h-full bg-black group/vid"
+                      onClick={() => setPlayingId(item.id)}
+                    >
+                      <img
+                        src={getDriveThumbnail(item.driveId)}
+                        alt={item.title}
+                        className="w-full h-full object-cover object-top group-hover/vid:scale-105 transition-transform duration-500"
+                        loading="lazy"
+                        onError={(e) => {
+                          e.target.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"%3E%3Crect fill="%23111" width="400" height="300"/%3E%3C/svg%3E';
+                        }}
+                      />
+                      <div className="absolute inset-0 flex items-center justify-center bg-black/30 group-hover/vid:bg-black/10 transition-colors">
+                        <div className="w-14 h-14 rounded-full bg-[#FF8D0F] flex items-center justify-center shadow-lg text-black font-extrabold pl-0.5 transform group-hover/vid:scale-110 transition-transform text-base">
+                          ▶
+                        </div>
+                      </div>
+                    </div>
+                  )
+                ) : item.type === "wistia" ? (
                   item.wistiaId.startsWith("PON_AQUI") ? (
                     <a
                       href={item.targetUrl}
