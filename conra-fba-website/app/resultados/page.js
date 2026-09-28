@@ -8,27 +8,31 @@ import { Play, X } from 'lucide-react';
 // ============================================
 
 const testimoniosData = [
-  // ORDEN CARPETA DRIVE "VIDEOS EN ORDEN DE $$$" (01 → 18)
-  // ORDENADO SEGÚN LOS LINKS PROPORCIONADOS (1 → 18)
-  { id: 'orden-01', driveId: '16H8fL7zfRcejaxC5-_GxkWtfPTjN2hue', title: 'Podio Clip 4', badge: 'RESULTADOS', category: 'podio', name: 'Estudiante', stat: null },
-  { id: 'orden-02', driveId: '16wS0wgXoaZq2g1WRIc-6D3QHoENfNwb1', title: 'Lilian - Clip 2', badge: 'ESTUDIANTE', category: 'clip', name: 'Lilian', stat: null },
-  { id: 'orden-03', driveId: '181GxdE8hD9Zq90e22cC5VhwdEtLcfMEx', title: 'Review sin filtros 4', badge: 'TESTIMONIO', category: 'review', name: 'Estudiante', stat: null },
-  { id: 'orden-04', driveId: '19OR8b43P6V31dJms1ElFlB9U7WTpiLm3', title: 'Azucena - Testimonio', badge: 'ESTUDIANTE', category: 'clip', name: 'Azucena', stat: null },
-  { id: 'orden-05', driveId: '1I1ucC_Bdske2wM2tL2QN3LLVp6gmsLNk', title: 'Onell - 5K en un día', badge: 'RESULTADOS', category: 'clip', name: 'Onell', stat: '$5K' },
-  { id: 'orden-06', driveId: '1IhD6-97-qbXhKcI2op5xNMez87BvwfM6', title: 'Lilian - Clip 1', badge: 'ESTUDIANTE', category: 'clip', name: 'Lilian', stat: null },
-  { id: 'orden-07', driveId: '1JBClsWbmxt6g51LL2xqOGX1e_NdbhIag', title: 'Podio Clip 5', badge: 'RESULTADOS', category: 'podio', name: 'Estudiante', stat: null },
-  { id: 'orden-08', driveId: '1Q06WB-tebivpJdZ_lhXGzxMbpJl2sJyy', title: 'Onell - 26K facturados', badge: 'RESULTADOS', category: 'clip', name: 'Onell', stat: '$26K' },
-  { id: 'orden-09', driveId: '1TfR3gbQiSe9x7Jpk5pXdAsiSXkz6I4av', title: 'Camilo - Dos marcas y 7 productos', badge: 'RESULTADOS', category: 'clip', name: 'Camilo', stat: '7 SKUs' },
-  { id: 'orden-10', driveId: '1UC4zR1LzzDrLVoJ1w8SiaP4gsnQ3mUvZ', title: 'Elizabeth - Resultados crudos', badge: 'RESULTADOS', category: 'clip', name: 'Elizabeth', stat: null },
-  { id: 'orden-11', driveId: '1VJ5jKjGDCsX_5AyUY8GpQuVc-q7cVKOV', title: 'Felipe - Clip 2', badge: 'TESTIMONIO', category: 'clip', name: 'Felipe', stat: null },
-  { id: 'orden-12', driveId: '1VnevTKEXidODA7qydVLl8ZrOeIfjv9bT', title: 'Podio Clip 8', badge: 'RESULTADOS', category: 'podio', name: 'Estudiante', stat: null },
-  { id: 'orden-13', driveId: '1Za4kUY0qyJa8DgclfBtL4Xqbf0_5vDix', title: 'Felipe - Clip 1', badge: 'TESTIMONIO', category: 'clip', name: 'Felipe', stat: null },
-  { id: 'orden-14', driveId: '1ZuYl1P60uotfoaJbhdcfNYqiIjle4ogQ', title: 'Podio Clip 9', badge: 'RESULTADOS', category: 'podio', name: 'Estudiante', stat: null },
-  { id: 'orden-15', driveId: '1cLFp252_sgOwPqW6ikrHod3BplA3hQ7W', title: 'Onell - Review sin filtros', badge: 'TESTIMONIO', category: 'clip', name: 'Onell', stat: null },
-  { id: 'orden-16', driveId: '1mW-yQF3AH-SO6PaRqDwRcMx9LlgB3Fuc', title: 'Review sin filtros 2', badge: 'TESTIMONIO', category: 'review', name: 'Estudiante', stat: null },
-  { id: 'orden-17', driveId: '1qD7oIuR03R7-lWmA4uy8bTQKAfbjUh9a', title: 'Podio Clip 6', badge: 'RESULTADOS', category: 'podio', name: 'Estudiante', stat: null },
-  { id: 'orden-18', driveId: '1sBSLVwwN1Sd5mY0FIPuBHsEhD2-6JRfd', title: 'Review sin filtros 5', badge: 'TESTIMONIO', category: 'review', name: 'Estudiante', stat: null },
+  // ==========================================
+  // ORDEN ESTRICTO SEGÚN GOOGLE DRIVE (01 → 18)
+  // ==========================================
+  { id: 'orden-01', driveId: '1Q06WB-tebivpJdZ_lhXGzxMbpJl2sJyy', title: '01. Onell 26k facturados', badge: 'RESULTADOS', category: 'clip', name: 'Onell', stat: '$26K' },
+  { id: 'orden-02', driveId: '1JBClsWbmxt6g51LL2xqOGX1e_NdbhIag', title: '02. PODIO CLIP-5', badge: 'RESULTADOS', category: 'podio', name: 'Estudiante', stat: null },
+  { id: 'orden-03', driveId: '1UC4zR1LzzDrLVoJ1w8SiaP4gsnQ3mUvZ', title: '03. ELIZABETH CRUDO', badge: 'RESULTADOS', category: 'clip', name: 'Elizabeth', stat: null },
+  { id: 'orden-04', driveId: '1I1ucC_Bdske2wM2tL2QN3LLVp6gmsLNk', title: '04. Onell 5 k en un dia', badge: 'RESULTADOS', category: 'clip', name: 'Onell', stat: '$5K' },
+  { id: 'orden-05', driveId: '1Za4kUY0qyJa8DgclfBtL4Xqbf0_5vDix', title: '05. FELIPE CLIP-1', badge: 'TESTIMONIO', category: 'clip', name: 'Felipe', stat: null },
+  { id: 'orden-06', driveId: '1IhD6-97-qbXhKcI2op5xNMez87BvwfM6', title: '06. Lilian clip-1', badge: 'ESTUDIANTE', category: 'clip', name: 'Lilian', stat: null },
+  { id: 'orden-07', driveId: '1qD7oIuR03R7-lWmA4uy8bTQKAfbjUh9a', title: '07. PODIO CLIP-6', badge: 'RESULTADOS', category: 'podio', name: 'Estudiante', stat: null },
+  { id: 'orden-08', driveId: '1VJ5jKjGDCsX_5AyUY8GpQuVc-q7cVKOV', title: '08. FELIPE CLIP-2', badge: 'TESTIMONIO', category: 'clip', name: 'Felipe', stat: null },
+  { id: 'orden-09', driveId: '16wS0wgXoaZq2g1WRIc-6D3QHoENfNwb1', title: '09. lilian clip-2', badge: 'ESTUDIANTE', category: 'clip', name: 'Lilian', stat: null },
+  { id: 'orden-10', driveId: '1cLFp252_sgOwPqW6ikrHod3BplA3hQ7W', title: '10. ONELL CRUDO', badge: 'TESTIMONIO', category: 'clip', name: 'Onell', stat: null },
+  { id: 'orden-11', driveId: '16H8fL7zfRcejaxC5-_GxkWtfPTjN2hue', title: '11. PODIO CLIP-4', badge: 'RESULTADOS', category: 'podio', name: 'Estudiante', stat: null },
+  { id: 'orden-12', driveId: '1mW-yQF3AH-SO6PaRqDwRcMx9LlgB3Fuc', title: '12. REVIEW SIN FILTROS-2', badge: 'TESTIMONIO', category: 'review', name: 'Estudiante', stat: null },
+  { id: 'orden-13', driveId: '1VnevTKEXidODA7qydVLl8ZrOeIfjv9bT', title: '13. PODIO CLIP-8', badge: 'RESULTADOS', category: 'podio', name: 'Estudiante', stat: null },
+  { id: 'orden-14', driveId: '181GxdE8hD9Zq90e22cC5VhwdEtLcfMEx', title: '14. REVIEW SIN FILTROS-4', badge: 'TESTIMONIO', category: 'review', name: 'Estudiante', stat: null },
+  { id: 'orden-15', driveId: '1ZuYl1P60uotfoaJbhdcfNYqiIjle4ogQ', title: '15. PODIO CLIP-9', badge: 'RESULTADOS', category: 'podio', name: 'Estudiante', stat: null },
+  { id: 'orden-16', driveId: '1sBSLVwwN1Sd5mY0FIPuBHsEhD2-6JRfd', title: '16. REVIEW SIN FILTROS-5', badge: 'TESTIMONIO', category: 'review', name: 'Estudiante', stat: null },
+  { id: 'orden-17', driveId: '1TfR3gbQiSe9x7Jpk5pXdAsiSXkz6I4av', title: '17. Camilo - Dos marcas y 7 productos', badge: 'RESULTADOS', category: 'clip', name: 'Camilo', stat: '7 SKUs' },
+  { id: 'orden-18', driveId: '19OR8b43P6V31dJms1ElFlB9U7WTpiLm3', title: '18. Azucena - Testimonio', badge: 'ESTUDIANTE', category: 'clip', name: 'Azucena', stat: null },
 
+  // ==========================================
+  // RESTO DEL MURO (RELLENO)
+  // ==========================================
   // REVIEWS SIN FILTROS (5)
   { id: 'review-1', driveId: '1ZXqjPY0P_hzAkZGb8aoF-h5Zl3Qp-43w', title: 'Review sin filtros - Estudiante 1', badge: 'TESTIMONIO', category: 'review', name: 'Estudiante', stat: null },
   { id: 'review-2', driveId: '1a7IVRBaVzC1rYtU7CQonSEkHNgHiyA4d', title: 'Review sin filtros - Estudiante 2', badge: 'TESTIMONIO', category: 'review', name: 'Estudiante', stat: null },
@@ -70,7 +74,7 @@ const testimoniosData = [
 ];
 
 // ============================================
-// HELPER: Google Drive thumbnail URL (CORREGIDO)
+// HELPER: Google Drive thumbnail URL
 // ============================================
 const getDriveThumbnail = (driveId) => {
   return `https://drive.google.com/thumbnail?id=${driveId}&sz=w1000`;
